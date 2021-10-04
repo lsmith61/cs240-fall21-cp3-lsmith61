@@ -20,9 +20,7 @@ int main() {
 
    while(true) {
       cout << "Choose from ['Create' 'Display' 'Quit']" << endl;
-      
       string startingInput;
-
       cin >> startingInput;
 
       if (startingInput == "Create") {

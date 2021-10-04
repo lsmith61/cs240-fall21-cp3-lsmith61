@@ -6,6 +6,17 @@
 using namespace std;
 
 class Activity {
+    private:
+        string activityTitle;
+        string activityCreator;
+        string activityVenue;
+        DateTime beginDateTime;
+        DateTime endDateTime;
+        string exclusiveInput;
+        string exclusiveOutput;
+        bool exclusive;
+        string random;
+    
     public:
         // one line funcitons can stay in here
         Activity() {};
@@ -16,18 +27,10 @@ class Activity {
         string getVenue() { return activityVenue; };
         string getActivity();
         string getLine();
+        DateTime getElapsedTime();
+        DateTime getElapsedDate();
         
-    private:
-        string activityTitle;
-        string activityCreator;
-        string activityVenue;
-        DateTime beginDateTime;
-        DateTime endDateTime;
-        string exclusiveInput;
-        string exclusiveOutput;
-        bool exclusive;
-
-        string random;
+        
        // istringstream inSS;
        // string lineString;
 };

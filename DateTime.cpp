@@ -30,27 +30,78 @@ string DateTime::createDateTime() {
              cout << "year is not valid" << endl;
         }
         else{
+            string dateM_str = date.substr(0, 2);
+            string dateD_str = date.substr(3, 2);
+            string dateY_str = date.substr(6, 4);
+
+            dateM = stoi(dateM_str);
+            dateD = stoi(dateD_str);
+            dateY = stoi(dateY_str);
+            if(dateM  > 12 ){
+              notValidDate = true;
+              cout << "Month not valid. Enter month in {mm} form" << endl;
+            }
+            else if(dateD > 31) {
+                notValidDate = true;
+                cout << "Day of month not valid. Enter in {dd} form" << endl;
+            }
+            else{
             notValidDate = false;
             cout << "Date format is good!" << endl;
+            }
         }
     }
+
 
     bool notValidTime = true;
     while(notValidTime) {
         cout << "Enter Time [HH:MM:SS]" << endl;
         cin >> time;
-        if(time[2] != ':' || time[5] != '-'){
-            notValidTime = false;
+        if(time[2] != ':' || time[5] != ':'){
+            notValidTime = true;
             cout << "Improper time format" << endl;
         }
-        else if(!isdigit(time[0] || time[1])){
-            
+        else if(!isdigit(time[0]) || !isdigit(time[1])){
+            notValidTime = true;
+            cout << "Hour is not valid" << endl;
         } 
+         else if(!isdigit(time[3]) || !isdigit(time[4])){
+            notValidTime = true;
+            cout << "Minute is not valid" << endl;
+        } 
+        else if(!isdigit(time[6]) || !isdigit(time[7])){
+            notValidTime = true;
+            cout << "Second is not valid" << endl;
+        } 
+         else{
+            string timeH_str = time.substr(0, 2);
+            string timeM_str = date.substr(3, 2);
+            string timeS_str = date.substr(6, 2);
+
+            timeH = stoi(timeH_str);
+            timeM = stoi(timeM_str);
+            timeS = stoi(timeS_str);
+            if(timeH > 23){
+                notValidTime = true;
+                cout << "Hour is not valid. Enter in {hh} format" << endl;
+            }
+            else if(timeM > 59){
+                notValidTime = true;
+                cout << "Minute is not valid. Enter in {mm} format" << endl;
+            }
+            else if(timeS > 59){
+                notValidTime = true;
+                cout << "Second is not valid. Enter in {ss} format" << endl;
+            }
+            else{
+                notValidTime = false;
+                cout << "Date format is good!" << endl;
+            }
+        }
     }
 
-
-     return " [" + date + " " + time + "] ";
-
+    return " [" + date + " " + time + "] ";
+   // return date + time + dateM + dateD + dateY + timeH + timeM + timeS;
     /*cout << "Enter Month [mm]: " << endl;
     cin >> dateM;
     if(dateM >= 12 ) {
