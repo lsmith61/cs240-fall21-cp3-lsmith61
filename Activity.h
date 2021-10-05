@@ -16,16 +16,17 @@ class Activity {
         string exclusiveOutput;
         bool exclusive;
         string random;
+        string myActivityString;
     
     public:
         // one line funcitons can stay in here
         Activity() {};
         void createActivity();
         Activity(string, string, string);
+        string getActivity();
         /*string getTitle() { return activityTitle; };
         string getCreator() { return activityCreator; };
         string getVenue() { return activityVenue; };
-        string getActivity() {return myActivity};
         string getLine();
         DateTime getElapsedTime();
         DateTime getElapsedDate();
