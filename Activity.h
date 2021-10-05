@@ -22,13 +22,14 @@ class Activity {
         Activity() {};
         void createActivity();
         Activity(string, string, string);
-        string getTitle() { return activityTitle; };
+        /*string getTitle() { return activityTitle; };
         string getCreator() { return activityCreator; };
         string getVenue() { return activityVenue; };
-        string getActivity();
+        string getActivity() {return myActivity};
         string getLine();
         DateTime getElapsedTime();
         DateTime getElapsedDate();
+        */
         
         
        // istringstream inSS;
