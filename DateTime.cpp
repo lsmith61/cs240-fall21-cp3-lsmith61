@@ -41,9 +41,11 @@ string DateTime::createDateTime() {
               notValidDate = true;
               cout << "Month not valid. Enter month in {mm} form" << endl;
             }
-            else if(dateD > 31) {
-                notValidDate = true;
-                cout << "Day of month not valid. Enter in {dd} form" << endl;
+            else if(dateM == 02 || dateM == 04 || dateM == 06 || dateM == 09 || dateM = 11) {
+                if(dateD > 30) {
+                    notValidDate = true;
+                    cout << "Day of month not valid. This month does not have more than 30 days."  << endl;
+                }
             }
             else{
             notValidDate = false;

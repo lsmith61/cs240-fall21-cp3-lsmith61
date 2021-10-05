@@ -18,7 +18,7 @@ int main() {
    //vector<Activity> calendarVector;
    // where does this Activty call go to for the constructro? 
 
-   ActivityCollection myActivityCollection(1);
+   ActivityCollection myActivityCollection();
 
    while(true) {
       cout << "Choose from ['Create' 'Display' 'Quit']" << endl;
@@ -31,7 +31,7 @@ int main() {
          Activity myActivity;
          myActivity.createActivity();
          //calendarVector.push_back(myActivity);
-         myActvityCollection
+         myActvityCollection.addToArray(myActivity);
       }
       else if(startingInput == "Display"){
          // call function print statments 
