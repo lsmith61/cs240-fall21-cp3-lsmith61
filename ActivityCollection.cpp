@@ -20,8 +20,6 @@ ActivityCollection::ActivityCollection(){
 };
 */
 
-
-/*
 void ActivityCollection::growArray(){
     size = size * 2;
     Activity *newCollectionCal = new Activity[size];
@@ -33,12 +31,10 @@ void ActivityCollection::growArray(){
    //     // cout << collectionCal[i] // make sure these are all null
     //} 
     delete []collectionCal;
-    // cout collectioncal array for testing
-    collectionCal = newCollectionCal;
+    // cout collectionCal array for testing
+    // sets the pointer collectionCal to the pointer for newCollectionCal
+    collectionCal = newCollectionCal; 
 }
-*/
-
-
 
 void ActivityCollection::addToArray(Activity myActivity){
     // use a pointer to
@@ -50,6 +46,9 @@ void ActivityCollection::addToArray(Activity myActivity){
     ++ count; 
 }
 
+string ActivityCollection::displayArray(int index){
+    return collectionCal[index].getActivity(); 
+}
 
    /* for(int i = 0; i < collecitonCal.size(); ++i){
         if(collectionCal[size - 1] != null){
@@ -64,11 +63,11 @@ void ActivityCollection::addToArray(Activity myActivity){
         }
     }*/
 
-    int ActivityCollection::getSize(){
-        return size;
-    }
+int ActivityCollection::getSize(){
+    return size;
+}
 
-    int ActivityCollection::getCount(){
-        return count;
-    }
-    
+int ActivityCollection::getCount(){
+    return count;
+}
+

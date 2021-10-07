@@ -16,10 +16,11 @@ class ActivityCollection {
         ActivityCollection();
        // ActivityCollection(const ActivityCollection, &int); 
        // ~ActvitiyCollection(); //destructor
-        void addToArray(Activity g);
+        void addToArray(Activity);
         void growArray();
         int getSize();
-        int getCount():        
+        int getCount();  
+        string displayArray(int);      
 };
 
 

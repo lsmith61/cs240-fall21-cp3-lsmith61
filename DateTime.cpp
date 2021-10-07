@@ -3,7 +3,15 @@
 #include <iostream>
 #include <sstream>
 using namespace std;
- 
+
+/*DateTime::DateTime() {
+    minsInSecondsMulti = 60;
+    hoursInSecondsMulti = 3600;
+    daysInSecondsMulti = 86400;
+    yearInSecondsMulti = 31536000;
+}*/
+
+
 string DateTime::createDateTime() {
 
     std::istringstream ss;
@@ -38,18 +46,16 @@ string DateTime::createDateTime() {
             dateD = stoi(dateD_str);
             dateY = stoi(dateY_str);
             if(dateM  > 12 ){
-              notValidDate = true;
-              cout << "Month not valid. Enter month in {mm} form" << endl;
+               notValidDate = true;
+               cout << "Month not valid. Enter month in {mm} form" << endl;
             }
-            else if(dateM == 02 || dateM == 04 || dateM == 06 || dateM == 09 || dateM = 11) {
-                if(dateD > 30) {
-                    notValidDate = true;
-                    cout << "Day of month not valid. This month does not have more than 30 days."  << endl;
-                }
+            else if(dateD > 30) {
+                notValidDate = true;
+                cout << "Day of month not valid. This month does not have more than 30 days."  << endl;
             }
             else{
-            notValidDate = false;
-            cout << "Date format is good!" << endl;
+                notValidDate = false;
+                cout << "Date format is good!" << endl;
             }
         }
     }
@@ -67,7 +73,7 @@ string DateTime::createDateTime() {
             notValidTime = true;
             cout << "Hour is not valid" << endl;
         } 
-         else if(!isdigit(time[3]) || !isdigit(time[4])){
+        else if(!isdigit(time[3]) || !isdigit(time[4])){
             notValidTime = true;
             cout << "Minute is not valid" << endl;
         } 
@@ -75,7 +81,7 @@ string DateTime::createDateTime() {
             notValidTime = true;
             cout << "Second is not valid" << endl;
         } 
-         else{
+        else{
             string timeH_str = time.substr(0, 2);
             string timeM_str = date.substr(3, 2);
             string timeS_str = date.substr(6, 2);
@@ -96,79 +102,98 @@ string DateTime::createDateTime() {
                 cout << "Second is not valid. Enter in {ss} format" << endl;
             }
             else{
-                notValidTime = false;
-                cout << "Date format is good!" << endl;
+                notValidTime = true;
+                cout << "End Date and Time was inputted as prior to begin Date and Time" << endl;
             }
         }
     }
-
-    return " [" + date + " " + time + "] ";
-   // return date + time + dateM + dateD + dateY + timeH + timeM + timeS;
-    /*cout << "Enter Month [mm]: " << endl;
-    cin >> dateM;
-    if(dateM >= 12 ) {
-        cout << "Month not valid";
-    }
-    cout << "Enter Day of Month [dd]: " << endl;
-    cin >> dateD;
-    cout << "Enter Year [yyyy]: " << endl;
-    cin >> dateY;
-    */
-
-   // date = to_string(dateM) + "-" + to_string(dateD) + "-" + to_string(dateY);
-   // date 
-    //date = dateM + "-" + dateD + "-" + dateY;
-
-  //  istringstream inSS(date);
-   // inSS >> dateM;
-   // inSS >> dateD;
-   // inSS >> dateY;
-
-    /*size_t pos = 0;
-    string sparse = date;
-    string delimiter = "-";
-    string token; */
-
-   /* while((pos = sparse.find(delimeter) != string::npos)) {
-        token = sparse.substr(0, pos);
-        cout << token << endl;
-        sparse.erase + delimeter.length());
-    }*/
-
-    
-    /*cout << "Enter hour [hh]: " << endl;
-    cin >> timeH;
-    if(timeH >= 24 ) {
-        cout << "Hour not valid";
-    }
-    cout << "Enter minute [mm]: " << endl;
-    cin >> timeM;
-    cout << "Enter second [ss]: " << endl;
-    cin >> timeS;
-
-    cout << "hello";
-
-    time = to_string(timeH) + "-" + to_string(timeM) + "-" + to_string(timeS);
-    */
-   // if(getline(date, parsed,"-")) {
-    /*ss.str(date);
-    ss >> dateM;
-    */
-
-   /* 
-    cout  << "Enter Hour: " << endl;
-    cin >> timeH;
-    cout << "Enter Minute: " << endl;
-    cin >> timeM;
-    cout << "Enter Second: " << endl;
-    cin >> timeS;
-    */
-
-   // time = timeH + ":" + timeM  + ":" + timeS;
-    
-   
-
+    // check time date here 
+    // 
+    return " [" + date + " " + time + "] "; 
 }
+    
+    // implement - turn this into an epoch 
+    /*secondsEpoch = timeS;
+    minutesEpoch = timeM * 60;
+    hoursEpoch = 60 * 60;
+    daysEpoch = 24 * 60 * 60;
+    monthsEpoch = 
+    */
+    //continue this  
+
+
+
+int DateTime::getTimeInSeconds() {
+    // convert this
+    // seconds since 01/01/1900 00:00:00am
+    // put this in construc
+   /* minsInSeconds = mins * minsInSecondsMulti;
+    hoursInSeconds = hours * hoursInSecondsMulti;
+    daysInSeconds = days * daysInSecondsMulti;
+    yearsInSeconds = years * yearsInSecondsMulti;  
+    */
+   //minsInSeconds = 0;
+   //cout << minsInSeconds << endl;
+   minsInSeconds = timeM * 60;
+
+   hoursInSeconds = timeH * 3600;
+   daysInSeconds = dateD * 86400;
+   yearsInSeconds = dateY * 31536000;
+
+   monthsInSeconds = 31 * 86400;
+
+/*
+    if(dateM == 4 || dateM == 6 || dateM == 10) {
+        monthsInSeconds = 30 * 86400; 
+    }
+    else if(dateM == 2){
+        monthsInSeconds = 28 * 86400;
+    }
+    else{
+        monthsInSeconds = 31 * 86400;
+    }
+    */
+
+    totalSeconds = seconds + minsInSeconds + hoursInSeconds + daysInSeconds + monthsInSeconds + yearsInSeconds;
+    return totalSeconds;
+}
+
+/*
+DateTime epoch(DateTime *totalEpochTime){   
+}
+*/
+
+
+
+/*
+DateTime elapsedTime::operator<(const &dateTime rhs) {
+    DateTime timeElapsed;
+    timeElasped.timeH = timeH - rhs.timeH;
+    timeElapsed.timeM = timeM - rhs.timeM;
+
+    if(timeM >= 60) {
+        timeH += 1;
+        timeM -= 60;
+    }
+    return timeElapsed;
+}
+*/
+bool DateTime::operator<(const DateTime &end){
+    //return timeTotal < end.timeTotal;
+    // this is the same as line 141
+    getTimeInSeconds();
+    //cout << totalSeconds;
+   // cout << 
+    if(totalSeconds < end.totalSeconds) {
+        return true;
+    }
+    else{
+        cout << "End Date/Time is prior to begin Date/Time" << endl;
+        return false;
+    }
+    
+}
+
 
 string DateTime::print() {
     return "Date: " + date + ", Time: " + time;
