@@ -47,26 +47,27 @@ void Activity::createActivity(){
     cout << "END Date and Time" << endl;
     endDateTime.createDateTime();
 
-    // operator overloaded --> return true if beginDateTime is less than endDateTime
-   // DateTime myDateTimeobj;
-  // endDateTime.getTimeInSeconds();
+/*
+     operator overloaded --> return true if beginDateTime is less than endDateTime
+    DateTime myDateTimeobj;
+   endDateTime.getTimeInSeconds();
    cout << beginDateTime.getTimeInSeconds() << " " <<endDateTime.getTimeInSeconds() << endl;
-  //  while(!isOrderValid)
-   // while(beginDateTime.getTimeInSeconds() > endDateTime.getTimeInSeconds()){
-      bool isOrderValid = beginDateTime.getTimeInSeconds() > endDateTime.getTimeInSeconds();
+    while(!isOrderValid)
+    while(beginDateTime.getTimeInSeconds() > endDateTime.getTimeInSeconds()){
+      bool isOrderValid = beginDateTime.getTimeInSeconds() < endDateTime.getTimeInSeconds();
       while(!isOrderValid){  
         
-        cout << "Please re-enter date and time" << endl;
-        cout << "BEGIN Date and Time" << endl;
-        beginDateTime.createDateTime();
+      //  cout << "Please re-enter date and time" << endl;
+      //  cout << "BEGIN Date and Time" << endl;
+      //  beginDateTime.createDateTime();
 
-        cout << "END Date and Time" << endl;
-        endDateTime.createDateTime();
+      //  cout << "END Date and Time" << endl;
+       // endDateTime.createDateTime();
 
-        isOrderValid = beginDateTime.getTimeInSeconds() < endDateTime.getTimeInSeconds();
-    }
+      //  isOrderValid = beginDateTime.getTimeInSeconds() < endDateTime.getTimeInSeconds();
+    } 
 
-/*
+
     if(beginDateTime.getTimeInSeconds() < endDateTime.getTimeInSeconds()){
         cout << "Correct date/time order" << endl;
     }

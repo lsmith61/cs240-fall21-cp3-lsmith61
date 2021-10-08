@@ -102,8 +102,8 @@ string DateTime::createDateTime() {
                 cout << "Second is not valid. Enter in {ss} format" << endl;
             }
             else{
-                notValidTime = true;
-                cout << "End Date and Time was inputted as prior to begin Date and Time" << endl;
+                notValidTime = false;
+                cout << "Date format is good" << endl;
             }
         }
     }
@@ -111,14 +111,14 @@ string DateTime::createDateTime() {
     // 
     return " [" + date + " " + time + "] "; 
 }
-    
+    /*
     // implement - turn this into an epoch 
-    /*secondsEpoch = timeS;
+    secondsEpoch = timeS;
     minutesEpoch = timeM * 60;
     hoursEpoch = 60 * 60;
     daysEpoch = 24 * 60 * 60;
     monthsEpoch = 
-    */
+    
     //continue this  
 
 
@@ -127,11 +127,11 @@ int DateTime::getTimeInSeconds() {
     // convert this
     // seconds since 01/01/1900 00:00:00am
     // put this in construc
-   /* minsInSeconds = mins * minsInSecondsMulti;
+   //minsInSeconds = mins * minsInSecondsMulti;
     hoursInSeconds = hours * hoursInSecondsMulti;
     daysInSeconds = days * daysInSecondsMulti;
     yearsInSeconds = years * yearsInSecondsMulti;  
-    */
+    
    //minsInSeconds = 0;
    //cout << minsInSeconds << endl;
    minsInSeconds = timeM * 60;
@@ -142,7 +142,7 @@ int DateTime::getTimeInSeconds() {
 
    monthsInSeconds = 31 * 86400;
 
-/*
+
     if(dateM == 4 || dateM == 6 || dateM == 10) {
         monthsInSeconds = 30 * 86400; 
     }
@@ -152,20 +152,20 @@ int DateTime::getTimeInSeconds() {
     else{
         monthsInSeconds = 31 * 86400;
     }
-    */
+    
 
     totalSeconds = seconds + minsInSeconds + hoursInSeconds + daysInSeconds + monthsInSeconds + yearsInSeconds;
     return totalSeconds;
-}
+} 
 
-/*
+
 DateTime epoch(DateTime *totalEpochTime){   
 }
-*/
 
 
 
-/*
+
+
 DateTime elapsedTime::operator<(const &dateTime rhs) {
     DateTime timeElapsed;
     timeElasped.timeH = timeH - rhs.timeH;
@@ -177,11 +177,12 @@ DateTime elapsedTime::operator<(const &dateTime rhs) {
     }
     return timeElapsed;
 }
-*/
+
+
 bool DateTime::operator<(const DateTime &end){
     //return timeTotal < end.timeTotal;
     // this is the same as line 141
-    getTimeInSeconds();
+    //getTimeInSeconds();
     //cout << totalSeconds;
    // cout << 
     if(totalSeconds < end.totalSeconds) {
@@ -193,6 +194,7 @@ bool DateTime::operator<(const DateTime &end){
     }
     
 }
+*/
 
 
 string DateTime::print() {

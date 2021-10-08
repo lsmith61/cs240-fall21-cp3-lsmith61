@@ -52,7 +52,7 @@ class DateTime {
    // DateTime operator-(DateTime rhs);
     DateTime elapsedDate();
     DateTime epoch(DateTime *totalEpochTime);
-    bool operator<(const DateTime &other);
+   // bool operator<(const DateTime &other);
 
 };
 
