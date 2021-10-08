@@ -30,7 +30,7 @@ void ActivityCollection::growArray(){
    //     collectionCal[i] = null;
    //     // cout << collectionCal[i] // make sure these are all null
     //} 
-    delete []collectionCal;
+    delete []collectionCal; // destructor 
     // cout collectionCal array for testing
     // sets the pointer collectionCal to the pointer for newCollectionCal
     collectionCal = newCollectionCal; 

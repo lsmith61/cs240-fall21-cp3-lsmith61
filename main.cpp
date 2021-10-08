@@ -18,7 +18,27 @@ int main() {
    //vector<Activity> calendarVector;
    // where does this Activty call go to for the constructro? 
 
-   ActivityCollection myActivityCollection;
+ //out << ""
+   
+   while (true){
+      cout << "Select: [Register, Login, User]" << endl;
+      string topInput;
+      cin >> topInput << endl;
+      if(topInput == "Register"){
+         cout >> "Enter username: " << endl;
+         cin << userNameInput;
+         cout >> "Enter password: " << endl;
+         cin << userNameInput;
+         Login loginUserObj(userNameInput, userNameInput);
+      }
+      else if(topInput == "Login"){
+         ActivityCollection myActivityCollection; // this should be created within each login
+      }
+      else if(topInput == "Logout"){
+         break;
+      }
+   }
+
 
    while(true) {
       cout << "Choose from ['Create' 'Display' 'Quit']" << endl;
