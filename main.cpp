@@ -19,19 +19,42 @@ int main() {
    // where does this Activty call go to for the constructro? 
 
  //out << ""
-   
+   vector<Login> usersVector;
+
    while (true){
       cout << "Select: [Register, Login, User]" << endl;
       string topInput;
       cin >> topInput << endl;
       if(topInput == "Register"){
-         cout >> "Enter username: " << endl;
-         cin << userNameInput;
-         cout >> "Enter password: " << endl;
-         cin << userNameInput;
-         Login loginUserObj(userNameInput, userNameInput);
+         Login myLogin();
+         login.setUserName();
+         login.setPassword();
+         usersVector.push_back(myLogin);
+         /*
+         cout << "Enter username: " << endl;
+         cin >> userNameInput;
+         cout << "Enter password: " << endl;
+         cin >> passwordInput;
+         Login loginUserObj(userNameInput, passwordInput);
+         */
       }
       else if(topInput == "Login"){
+        Login.userLogin()
+        for(int i = 0; i < usersVector.size(); ++i) {
+        if(usersVector.at(i) == userLogin.getUserName()) {
+            cout << "Username is in system! " << endl;
+            if(usersVector.at(i) == userLogin.getPassword()) {
+                cout << "Login Successful! Password matches username" << endl;
+                cout << "Welcome " << userLogin.getUserName() << endl;
+                userVectors
+                 
+            }
+        }
+        else{
+            cout << "Login unsuccessful" << endl;
+        }
+    }
+
          ActivityCollection myActivityCollection; // this should be created within each login
       }
       else if(topInput == "Logout"){

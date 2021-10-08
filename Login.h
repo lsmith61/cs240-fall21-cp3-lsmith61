@@ -12,8 +12,10 @@ class Login {
         Login *usersArray;
 
     public:
-       Login(string username, string password);
-
+        Login();
+        void setUserName();
+        void setPassword();
+        void userLogin(string, string);
 };
 
 

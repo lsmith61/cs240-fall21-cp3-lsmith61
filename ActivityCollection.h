@@ -14,8 +14,8 @@ class ActivityCollection {
     public:
         // constructor 
         ActivityCollection();
-       // ActivityCollection(const ActivityCollection, &int); 
-       // ~ActvitiyCollection(); //destructor
+        ActivityCollection(const ActivityCollection &ac); 
+        ~ActvitiyCollection(){ delete []collectionCal; }; //destructor
         void addToArray(Activity);
         void growArray();
         int getSize();
