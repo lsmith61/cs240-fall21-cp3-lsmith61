@@ -14,9 +14,11 @@ Login::Login(string username, string password) {
 }
 */
 
+
 void Login::setUserName() {
     cout << "Create a username: " << endl;
     cin >> username;
+
 }
 
 void Login::setPassword() {
@@ -28,14 +30,17 @@ string Login::getUserName() {
     return username;
 }
 
-string Login::getPasswrod(){
-    return password();
+string Login::getPassword(){
+    return password;
 }
 void userLogin(string, string) {
+    string usernameInput;
+    string passwordInput;
     cout << "Enter username: " << endl;
-    cin >> username;
+    cin >> usernameInput;
     cout << "Enter password: " << endl;
-    cin >> password;
+    cin >> passwordInput;
+
 
 }
 

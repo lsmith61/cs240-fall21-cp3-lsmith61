@@ -9,18 +9,19 @@ class ActivityCollection {
     private:
         int size; 
         int count;
-        Activity *collectionCal;
+        ActivityCollection *collectionCal;
 
     public:
         // constructor 
         ActivityCollection();
         ActivityCollection(const ActivityCollection &ac); 
-        ~ActvitiyCollection(){ delete []collectionCal; }; //destructor
+       // ~ActvitiyCollection(){ delete []collectionCal; }; //destructor
         void addToArray(Activity);
         void growArray();
         int getSize();
         int getCount();  
-        string displayArray(int);      
+        string displayArray(int);  
+        //ctivityCollection getActivityCollection();    
 };
 
 

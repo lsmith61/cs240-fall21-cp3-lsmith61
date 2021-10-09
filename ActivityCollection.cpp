@@ -10,11 +10,16 @@ ActivityCollection::ActivityCollection(){
     size = 1;
     count = 0;
     collectionCal = new Activity[size];
-};
- ActivityCollectio::~ActvitiyCollection(){ 
+}
+
+/*
+ActivityCollection ActivityCollection::getActivityCollection() {
+    return ActivityCollection;
+}*/
+ /*ActivityCollectio::~ActvitiyCollection(){ 
      delete []collectionCal;
     }; //destructor
-
+*/
 
 /*ActivityCollection::ActivityCollection(const ActivityCollection &ac){
     Activity *collectionCal;
@@ -39,11 +44,12 @@ void ActivityCollection::growArray(){
     // sets the pointer collectionCal to the pointer for newCollectionCal
     collectionCal = newCollectionCal; 
 }
-ActivityCollection(const ActivityCollection &ac){
+
+/*ActivityCollection(const ActivityCollection &ac){
     size = ac.size;
     count = ac.count;
     collectionCal = ac.collectionCal;
-} 
+} */
 
 void ActivityCollection::addToArray(Activity myActivity){
     // use a pointer to
