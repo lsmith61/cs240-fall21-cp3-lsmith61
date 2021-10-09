@@ -21,13 +21,13 @@ ActivityCollection ActivityCollection::getActivityCollection() {
     }; //destructor
 */
 
-/*ActivityCollection::ActivityCollection(const ActivityCollection &ac){
-    Activity *collectionCal;
+ActivityCollection::ActivityCollection(ActivityCollection &ac){
+    myActivityCollection = ac.myActivityCollection;
     count = ac.count;
-    ptr_to_data 
+    size = ac.size; 
     
 };
-*/
+
 
 void ActivityCollection::growArray(){
     size = size * 2;
