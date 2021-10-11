@@ -64,6 +64,7 @@ int main() {
                 //usersVector.at(i).setActivityCollection();
                 //ActivityCollection tempAC;
                 //tempAC = usersVectors.at(i).getActivityCollection();
+                smallCheck = true;
                 while(smallCheck) {
                   cout << "Choose from ['Create' 'Display' 'Quit']" << endl;
                   string startingInput;
@@ -74,19 +75,15 @@ int main() {
                      //create new activity then add it to vector
                      Activity myActivity; // empty contstructor 
                      myActivity.createActivity(); // populate here
-                     //calendarVector.push_back(myActivity);
-                     usersVector.at(i).addActivity(myActivity);
-                     //myActivityCollection.addToArray(myActivity);
+                     usersVector.at(i).addActivity(myActivity); // copy constructor called here 
                   }
                   else if(startingInput == "Display"){
                      // call function print statments 
-                     //for(int i = 0; i < (int)calendarVector.size(); ++i) {
                         // how do i call the funtion? confused about what paramters go into it? can an object be a paramter?
-                        //cout << "Number of activites: " << calanderVector.size() << endl;
-                     // cout << calendarVector.at(i).getActivity() << endl;
-                        for(int i = 0; i < usersVector.at(i).getActivityCollection().getCount(); ++i) {
-                           cout << usersVector.at(i).getActivityCollection().displayArray(i) << endl;
-                        }
+                        usersVector.at(i).display();
+                        // for(int i = 0; i < usersVector.at(i).getActivityCollection().getCount(); ++i) {
+                        //    //cout << usersVector.at(i).getActivityCollection().displayArray(i) << endl;
+                        // }
                      }
                   else if(startingInput == "Quit"){
                      // end program

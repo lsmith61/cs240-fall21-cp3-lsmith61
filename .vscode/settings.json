@@ -1,0 +1,16 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "__config": "cpp",
+        "__locale": "cpp",
+        "chrono": "cpp",
+        "ctime": "cpp",
+        "iterator": "cpp",
+        "locale": "cpp",
+        "algorithm": "cpp",
+        "string": "cpp",
+        "iostream": "cpp",
+        "array": "cpp",
+        "iosfwd": "cpp"
+    }
+}

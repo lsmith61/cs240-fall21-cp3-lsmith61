@@ -24,6 +24,7 @@ class Activity {
         Activity() {};
         void createActivity();
         Activity(string, string, string);
+        Activity(const Activity &act);
         string getActivity();
         /*string getTitle() { return activityTitle; };
         string getCreator() { return activityCreator; };

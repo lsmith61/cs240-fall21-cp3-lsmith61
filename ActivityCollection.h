@@ -24,6 +24,7 @@ class ActivityCollection {
         int getSize();
         int getCount();  
         string displayArray(int);  
+        void displayAll();
         //ActivityCollection getActivityCollection();    
 };
 

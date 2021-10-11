@@ -69,6 +69,12 @@ void ActivityCollection::addToArray(Activity myActivity){
     ++ count; 
 }
 
+void ActivityCollection::displayAll(){
+    for(int i = 0; i < count; ++i){
+        cout << displayArray(i) << endl;
+    }
+
+}
 string ActivityCollection::displayArray(int index){
     return collectionCal[index].getActivity(); 
 }

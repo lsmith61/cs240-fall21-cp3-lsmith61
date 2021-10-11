@@ -21,6 +21,7 @@ class User {
         string getUsername();
         string getPassword();
         void addActivity(Activity);
+        void display();
         //class ActivityCollection setActivityCollection();
         class ActivityCollection getActivityCollection();
 };

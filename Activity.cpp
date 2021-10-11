@@ -21,6 +21,18 @@ string Activity::getActivity() {
     return "Activity: " + activityTitle + " | Creator: " + activityCreator + " | Venue: " + activityVenue + " | Begins: " + beginDateTime.print() + " | Ends: " + endDateTime.print() + " [" +  exclusiveOutput + "]";
    //  cout << title << endl << creator << endl << venue << endl;
 }
+Activity::Activity(const Activity &act){
+        activityTitle = act.activityTitle;
+        activityCreator = act.activityCreator;
+        activityVenue = act.activityVenue;
+        beginDateTime = act.beginDateTime;
+        endDateTime = act.endDateTime;
+        exclusiveInput = act.exclusiveInput;
+        exclusiveOutput = act.exclusiveOutput;
+        exclusive = act.exclusive;
+        random = act.random;
+        myActivityString = act.myActivityString;
+}
 
 void Activity::createActivity(){
     // use this because without input was weird without it, just take random input and never use
