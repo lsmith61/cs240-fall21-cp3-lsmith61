@@ -1,6 +1,7 @@
 #ifndef ACTIVITY_H
 #define ACTIVITY_H
 #include <string>
+#include <vector>
 #include "DateTime.h"
 
 using namespace std;

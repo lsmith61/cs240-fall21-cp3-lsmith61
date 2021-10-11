@@ -2,10 +2,9 @@
 #include "ActivityCollection.h"
 #include "Login.h"
 #include "User.h"
-#include<iostream>
-#include<string>
-
-#include<vector>
+#include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
  //TODO: Destructor somewhere??
 
@@ -36,6 +35,7 @@ int main() {
          myUser.setUsername();
          myUser.setPassword();
          usersVector.push_back(myUser);
+
         // myUserCollection.addToArray(myUser);
 
          //usersVector.push_back(myUser);
@@ -61,7 +61,6 @@ int main() {
             if(usersVector.at(i).getPassword() == loginPassword) {
                 cout << "Login Successful! Password matches username" << endl;
                 cout << "Welcome " << usersVector.at(i).getUsername() << endl;
-                ActivityCollection myActivityCollection;
                 //usersVector.at(i).setActivityCollection();
                 //ActivityCollection tempAC;
                 //tempAC = usersVectors.at(i).getActivityCollection();
@@ -73,12 +72,11 @@ int main() {
                   if (startingInput == "Create") {
                      // use vetor
                      //create new activity then add it to vector
-                     
                      Activity myActivity; // empty contstructor 
                      myActivity.createActivity(); // populate here
                      //calendarVector.push_back(myActivity);
-                     ActivityCollection myActivityCollection;
-                     myActivityCollection.addToArray(myActivity);
+                     usersVector.at(i).addActivity(myActivity);
+                     //myActivityCollection.addToArray(myActivity);
                   }
                   else if(startingInput == "Display"){
                      // call function print statments 
@@ -86,8 +84,8 @@ int main() {
                         // how do i call the funtion? confused about what paramters go into it? can an object be a paramter?
                         //cout << "Number of activites: " << calanderVector.size() << endl;
                      // cout << calendarVector.at(i).getActivity() << endl;
-                        for(int i = 0; i < myActivityCollection.getCount(); ++i) {
-                           cout << myActivityCollection.displayArray(i) << endl;
+                        for(int i = 0; i < usersVector.at(i).getActivityCollection().getCount(); ++i) {
+                           cout << usersVector.at(i).getActivityCollection().displayArray(i) << endl;
                         }
                      }
                   else if(startingInput == "Quit"){

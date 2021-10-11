@@ -1,3 +1,5 @@
+/*
+
 #include "ActivityCollection.h"
 #include "DateTime.h"
 #include "User.h"
@@ -17,7 +19,7 @@ string activityTitle;
         bool exclusive;
         string random;
         string myActivityString;
-        Assert
+      //  Assert
 
 }
 
@@ -25,3 +27,5 @@ void testCopyConstructor() {
 
 
 }
+
+*/

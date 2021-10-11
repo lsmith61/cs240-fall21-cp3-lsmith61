@@ -11,7 +11,7 @@ class User {
     private:
         string username;
         string password;
-        ActivityCollection myActivityCollection;
+        ActivityCollection *myActivityCollection;
 
     public:
         User();
@@ -20,8 +20,9 @@ class User {
         void userLogin(string, string);
         string getUsername();
         string getPassword();
-        class ActivityCollection setActivityCollection();
-        //class ActivityCollection getActivityCollection();
+        void addActivity(Activity);
+        //class ActivityCollection setActivityCollection();
+        class ActivityCollection getActivityCollection();
 };
 
 

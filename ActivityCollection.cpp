@@ -20,13 +20,21 @@ ActivityCollection ActivityCollection::getActivityCollection() {
      delete []collectionCal;
     }; //destructor
 */
-
+//TODO: HOW DOES COPY CONSTRUCTOR WORK
+// Copy Constructor 
 ActivityCollection::ActivityCollection(ActivityCollection &ac){
-    myActivityCollection = ac.myActivityCollection;
+    myActivityCollection = ac.myActivityCollection; 
     count = ac.count;
     size = ac.size; 
-    
 };
+
+ActivityCollection::~ActivityCollection(){ 
+    delete []collectionCal; 
+    delete []myActivityCollection;
+}
+
+
+
 
 
 void ActivityCollection::growArray(){

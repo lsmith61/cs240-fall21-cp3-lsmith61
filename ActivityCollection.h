@@ -9,19 +9,22 @@ class ActivityCollection {
     private:
         int size; 
         int count;
-        ActivityCollection *collectionCal;
+        Activity *myActivityCollection;
+        // this is not needed to declare since it is a temp declaration in growArray function
+        //Activity *newCollectionCal;
+        Activity *collectionCal; // Create an array that holds Activity class objects 
 
     public:
         // constructor 
         ActivityCollection();
-        ActivityCollection(const ActivityCollection &ac); 
-       // ~ActvitiyCollection(){ delete []collectionCal; }; //destructor
+        ActivityCollection(ActivityCollection &ac); 
+        ~ActivityCollection(); //destructor
         void addToArray(Activity);
         void growArray();
         int getSize();
         int getCount();  
         string displayArray(int);  
-        //ctivityCollection getActivityCollection();    
+        //ActivityCollection getActivityCollection();    
 };
 
 
