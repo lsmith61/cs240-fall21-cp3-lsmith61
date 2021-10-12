@@ -4,13 +4,22 @@
 #include <sstream>
 using namespace std;
 
-/*DateTime::DateTime() {
+/*
+DateTime::DateTime() {
     minsInSecondsMulti = 60;
     hoursInSecondsMulti = 3600;
     daysInSecondsMulti = 86400;
     yearInSecondsMulti = 31536000;
-}*/
-
+}
+*/
+DateTime::DateTime(int dateM, int dateD, int dateY, int timeH, int timeM,int timeS) {
+    this->dateM = dateM;
+    this->dateD = dateD;
+    this->dateY = dateY;
+    this->timeH = timeH;
+    this->timeM = timeM;
+    this->timeS = timeS;
+}
 
 string DateTime::createDateTime() {
 
@@ -120,9 +129,10 @@ string DateTime::createDateTime() {
     monthsEpoch = 
     
     //continue this  
+    */
 
 
-
+/*
 int DateTime::getTimeInSeconds() {
     // convert this
     // seconds since 01/01/1900 00:00:00am
@@ -130,27 +140,27 @@ int DateTime::getTimeInSeconds() {
    //minsInSeconds = mins * minsInSecondsMulti;
     hoursInSeconds = hours * hoursInSecondsMulti;
     daysInSeconds = days * daysInSecondsMulti;
-    yearsInSeconds = years * yearsInSecondsMulti;  
+    yearsInSeconds = years * yearInSecondsMulti;  
     
    //minsInSeconds = 0;
    //cout << minsInSeconds << endl;
-   minsInSeconds = timeM * 60;
+   minsInSeconds = timeM * minsInSecondsMulti;
 
-   hoursInSeconds = timeH * 3600;
-   daysInSeconds = dateD * 86400;
-   yearsInSeconds = dateY * 31536000;
+   hoursInSeconds = timeH * hoursInSecondsMulti;
+   daysInSeconds = dateD * daysInSecondsMulti;
+   yearsInSeconds = dateY * yearInSecondsMulti;
 
-   monthsInSeconds = 31 * 86400;
+  // monthsInSeconds = 31 * 86400;
 
 
     if(dateM == 4 || dateM == 6 || dateM == 10) {
-        monthsInSeconds = 30 * 86400; 
+        monthsInSeconds = 30 * daysInSecondsMulti; 
     }
     else if(dateM == 2){
-        monthsInSeconds = 28 * 86400;
+        monthsInSeconds = 28 * daysInSecondsMulti;
     }
     else{
-        monthsInSeconds = 31 * 86400;
+        monthsInSeconds = 31 * daysInSecondsMulti;
     }
     
 
@@ -158,25 +168,6 @@ int DateTime::getTimeInSeconds() {
     return totalSeconds;
 } 
 
-
-DateTime epoch(DateTime *totalEpochTime){   
-}
-
-
-
-
-
-DateTime elapsedTime::operator<(const &dateTime rhs) {
-    DateTime timeElapsed;
-    timeElasped.timeH = timeH - rhs.timeH;
-    timeElapsed.timeM = timeM - rhs.timeM;
-
-    if(timeM >= 60) {
-        timeH += 1;
-        timeM -= 60;
-    }
-    return timeElapsed;
-}
 
 
 bool DateTime::operator<(const DateTime &end){
@@ -192,10 +183,9 @@ bool DateTime::operator<(const DateTime &end){
         cout << "End Date/Time is prior to begin Date/Time" << endl;
         return false;
     }
-    
 }
-*/
 
+*/
 
 string DateTime::print() {
     return "Date: " + date + ", Time: " + time;

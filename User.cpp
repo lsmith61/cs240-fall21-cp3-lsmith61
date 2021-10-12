@@ -10,11 +10,13 @@ User::User() {
     myActivityCollection = new ActivityCollection();
     username = "";
     password = "";
+  
 }
 
 void User::setUsername(){
     cout << "Create a user name: " << endl;
     cin >> username;
+    
 }
 
 void User::setPassword() {
@@ -44,7 +46,6 @@ string User::getUsername() {
 string User::getPassword() {
     return password;
 }
-
 
 ActivityCollection User::getActivityCollection() {
     return *myActivityCollection;

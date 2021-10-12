@@ -12,6 +12,7 @@ class DateTime {
     const int daysInSecondsMulti;
     const int yearInSecondsMulti;
     */
+    
     string date;
     string time;
 
@@ -47,7 +48,7 @@ class DateTime {
     DateTime(int, int, int, int, int, int);
     string createDateTime();
     string print();
-    int getTimeInSeconds();
+   // int getTimeInSeconds();
     //DateTime dateOperator;
    // DateTime operator-(DateTime rhs);
     DateTime elapsedDate();

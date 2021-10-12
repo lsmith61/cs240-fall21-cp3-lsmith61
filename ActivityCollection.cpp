@@ -16,11 +16,7 @@ ActivityCollection::ActivityCollection(){
 ActivityCollection ActivityCollection::getActivityCollection() {
     return ActivityCollection;
 }*/
- /*ActivityCollectio::~ActvitiyCollection(){ 
-     delete []collectionCal;
-    }; //destructor
-*/
-//TODO: HOW DOES COPY CONSTRUCTOR WORK
+ 
 // Copy Constructor 
 ActivityCollection::ActivityCollection(ActivityCollection &ac){
     myActivityCollection = ac.myActivityCollection; 

@@ -2,6 +2,7 @@
 #include "ActivityCollection.h"
 #include "Login.h"
 #include "User.h"
+#include "Test.h"
 #include <iostream>
 #include <string>
 #include <vector>
