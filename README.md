@@ -1,4 +1,9 @@
 # cs240-fall21-cp2-lsmith61
+run make 
+run ./exec (program will run)
+run ./tester (test will run)
+
+when running ./exec 
 Program will ask for user input of "Register" or "Login" or "Logout"
 This IS Case sensitive
 If you register program will ask to create a username and password

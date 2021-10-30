@@ -2,6 +2,7 @@
 #define ACTIVITY_H
 #include <string>
 #include <vector>
+#include"Venue.h"
 #include "DateTime.h"
 
 using namespace std;
@@ -9,8 +10,9 @@ using namespace std;
 class Activity {
     private:
         string activityTitle;
-        string activityCreator;
-        string activityVenue;
+        string activityCreator; 
+       // string activityVenue; 
+        Venue venue;
         DateTime beginDateTime;
         DateTime endDateTime;
         string exclusiveInput;

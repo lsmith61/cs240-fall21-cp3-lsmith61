@@ -1,8 +1,8 @@
 #include"Activity.h"
 #include"DateTime.h"
 #include<iostream>
-#include <sstream>
-#include <string>
+#include<sstream>
+#include<string>
 #include<vector>
 
 using namespace std;
@@ -18,13 +18,13 @@ using namespace std;
 string Activity::getActivity() {
     // TODO: ERROR: unsure what this is someting about binary expression, beginTime isn't allowed in thisn string?
     //TODO: Create a toString function from DateTime, this would make it into a string
-    return "Activity: " + activityTitle + " | Creator: " + activityCreator + " | Venue: " + activityVenue + " | Begins: " + beginDateTime.print() + " | Ends: " + endDateTime.print() + " [" +  exclusiveOutput + "]";
+    return "Activity: " + activityTitle + " | Creator: " + activityCreator + " | Venue: " + /*activityVenue */ + " | Begins: " + beginDateTime.print() + " | Ends: " + endDateTime.print() + " [" +  exclusiveOutput + "]";
    //  cout << title << endl << creator << endl << venue << endl;
 }
 Activity::Activity(const Activity &act){
         activityTitle = act.activityTitle;
         activityCreator = act.activityCreator;
-        activityVenue = act.activityVenue;
+        //activityVenue = act.activityVenue;
         beginDateTime = act.beginDateTime;
         endDateTime = act.endDateTime;
         exclusiveInput = act.exclusiveInput;
@@ -49,8 +49,8 @@ void Activity::createActivity(){
     getline(cin, activityCreator);
     //cin >> activityCreator
 
-    cout << "Enter Venue: " << endl;
-    getline(cin, activityVenue);
+    //cout << "Enter Venue: " << endl;
+   // getline(cin, activityVenue);
   //  cin >> activityVenue;
 
     cout << "BEGIN Date and Time" << endl;

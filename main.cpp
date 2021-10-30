@@ -1,4 +1,6 @@
 #include "Activity.h"
+#include"Venue.h"
+#include"LinkedList.h"
 #include "ActivityCollection.h"
 #include "Login.h"
 #include "User.h"
@@ -104,9 +106,53 @@ int main() {
       else if(topInput == "Logout"){
          bigCheck = false;
       }
-   }
+   } // end of all while loops.
+   // CP3 code begins here
+   //LinkedList<Venue>;
+   // Creates a new linked list on the heap. use destructor later
+   LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
+   // use venueList
+   string str0; string str1; string str2;
+   string venueLine;
+   ifstream VenueFile ("VenueFile.txt");
+  if (VenueFile.is_open()) {
+     while(getline(VenueFile, venueLine)){
+        cout << venueLine << endl;
+        int lineSize; 
+        lineSize = venueLine.length(); 
+        char venueLine[lineSize]; 
+        int whiteSpaceCount = 0;
+        // stringstream ss
+       // ss >> venue >> capacity >> location
+        for(int i = 0; i < lineSize; ++i) {
+           if(whiteSpaceCount >= 2) {
+              break;
+           }
+           if(str0 != NULL) {
 
+           }
+           if(venueLine[i] == " ") {
 
+           }
+           cout << venueLine[i] << " ";
+        }
+
+        //char* token = strtok(string, " ");
+        //while(token != NULL) {
+
+           
+        
+         
+         /*str0 = venueLine.split(" ");
+         str1 = venueLine.split(" ");
+         str2 = venueLine;*/
+        }
+     }
+  
+
+   //venueList.append(venue);
+
+   //*venueList.printLinkedListVenue();
 
    return 0;
 }
