@@ -31,12 +31,12 @@ class LinkedList {
         // ~LinkedList() {}; // destructor 
         LinkedList(T data){this->head = nullptr; };
         int getSize() {return size; };
-        void append(T); // add at the end;
+        void append(T data); // add at the end;
         void printLinkedListVenue();
         void printLinkedListUser();
         void printLinkedListActivity();
         void printLinkedListAttendance(); 
 };
 
-//#include "LinkedList.cpp"
+#include "LinkedList.cpp"
 #endif

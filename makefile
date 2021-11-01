@@ -1,4 +1,4 @@
-CC := g++
+CC := g++ -std=c++11
 CFLAGS := -Wall -g
 TARGET := exec
 
@@ -12,8 +12,8 @@ all: $(TARGET)
 
 test: tester
 
-tester: Test.o Activity.o DateTime.o ActivityCollection.o User.o 
-	$(CC) -o tester Test.o Activity.o DateTime.o ActivityCollection.o User.o 
+tester: Test.o Activity.o DateTime.o ActivityCollection.o User.o LinkedList.o
+	$(CC) -o tester Test.o Activity.o DateTime.o ActivityCollection.o User.o LinkedList.o
 
 Test.o: Test.cpp Test.h
 	$(CC) $(CFLAGS) -c Test.cpp

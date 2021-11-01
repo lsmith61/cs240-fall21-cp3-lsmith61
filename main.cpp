@@ -114,7 +114,7 @@ int main() {
    // CP3 code begins here
    //LinkedList<Venue>;
    // Creates a new linked list on the heap. use destructor later
-   // LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
+   LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    // use venueList
    string venueLine;
    ifstream VenueFile ("VenueFile.txt");
@@ -134,8 +134,10 @@ int main() {
         for (int i = 0; i < 3; ++i) {
            venueNameTemp = words[0];
            venueCapacityTemp = words[1];
-           venueLocationTemp = words[2];
         }
+        for (int j = 2; j < words.size(); ++ j) {
+            venueLocationTemp += words[j] + " ";
+         }
        //stringstream str_strm(venueNameTemp, venueCapacityTemp, venueLocationTemp);
        // stringstream ss;
        // string tmp; // a string to sore the word on each iteration
@@ -151,10 +153,12 @@ int main() {
         int venueCapacityTempInt;
         venueCapacityTempInt = stoi(venueCapacityTemp);
         
-        //call venue constructor 
-
+        //call venue constructor, works successfully
         Venue venueObj(venueNameTemp, venueCapacityTempInt, venueLocationTemp);
-        //cout << 
+        venueList->append(venueObj);
+        // append to linkedList
+        //debug line
+        //cout << endl << "PRINTING CAPACITY: " << venueObj.getCapacity() << endl << endl;
 
         //LinkedList<string> *words = new LinkedList<string>();
        // vector<string> words;
@@ -164,11 +168,11 @@ int main() {
            words->append(tmp);
         }
         */
-        
-      
 
         } 
      }
+
+// overload a compareTo operator ??
 // add to linkedinlist 
   //  Node *node = head;
        // while(node->next != nullptr) {
