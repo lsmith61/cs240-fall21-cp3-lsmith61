@@ -11,10 +11,10 @@ using namespace std;
 template <typename T> 
 class Node {
     private:
-        T data; // data in this current node
-        Node* next; // pointer to next node element 
 
     public:
+        T data; // data in this current node
+        Node* next; // pointer to next node element 
         Node(T data) {this->data = data; this->next = nullptr; };   
         T getData() {return data; };   
 };
@@ -22,10 +22,11 @@ class Node {
 template <typename T> 
 class LinkedList {
     private:
-        Node<T> *head;
-        int size;
+        
         
     public:
+        Node<T> *head;
+        int size;
         LinkedList() {};
         // ~LinkedList() {}; // destructor 
         LinkedList(T data){this->head = nullptr; };
@@ -37,6 +38,5 @@ class LinkedList {
         void printLinkedListAttendance(); 
 };
 
-
-#include "LinkedList.cpp"
+//#include "LinkedList.cpp"
 #endif

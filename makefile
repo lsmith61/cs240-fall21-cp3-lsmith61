@@ -4,7 +4,7 @@ TARGET := exec
 
 # $(wildcard *.cpp /xxx/xxx/*.cpp): get all .cpp files from the current directory and dir "/xxx/xxx/"
 # SRCS := $(wildcard *.cpp)
-SRCS := DateTime.cpp Venue.cpp Activity.cpp ActivityCollection.cpp User.cpp main.cpp
+SRCS := DateTime.cpp LinkedList.cpp Venue.cpp Activity.cpp ActivityCollection.cpp User.cpp main.cpp
 # $(patsubst %.cpp,%.o,$(SRCS)): substitute all ".cpp" file name strings to ".o" file name strings
 OBJS := $(patsubst %.cpp,%.o,$(SRCS))
 

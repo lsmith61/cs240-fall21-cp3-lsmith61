@@ -9,16 +9,22 @@ using namespace std;
 class Venue {
     private:
         string venueName;
-        string location;
         int capacity;
+        string location;
 
     public:
         // empty constructor 
         Venue();
         //value  constructor 
-        Venue(string venueName, int Capacity, string Location){this->venueName = venueName; this->location = location; this->capacity = capacity;};
-        
-        // venue operartor overloading equals 
+        Venue(string venueName, int capacity, string location){
+            this->venueName = venueName; 
+            this->location = location; 
+            this->capacity = capacity;
+            };
+        string getVenueName() {return venueName; };
+        int getCapacity() {return capacity; };
+        string getLocation() {return location; };
+        // venue operator overloading equals 
 };
 
 

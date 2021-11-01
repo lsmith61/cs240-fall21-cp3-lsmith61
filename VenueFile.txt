@@ -2,9 +2,9 @@ Digman 500 Dickinson
 Endicott 450 Newing
 Windham 400 Mountainview
 Yankee_Stadium 20000 NYC
-IHOP 45 Boston, Ma
-EB-G7 28 Binghamton University 
-Nike_Store 88 Tenafly, NJ
+IHOP 45 Boston,Ma
+EB-G7 28 Binghamton_University 
+Nike_Store 88 Tenafly,NJ
 Digman 500 Dickinson
-EB-G7 28 Binghamton University 
-Chipotle 45 New Haven, CT
+EB-G7 28 Binghamton_University 
+Chipotle 45 New_Haven,CT

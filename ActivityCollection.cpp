@@ -30,9 +30,6 @@ ActivityCollection::~ActivityCollection(){
 }
 
 
-
-
-
 void ActivityCollection::growArray(){
     size = size * 2;
     Activity *newCollectionCal = new Activity[size];

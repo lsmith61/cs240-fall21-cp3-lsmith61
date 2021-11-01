@@ -24,7 +24,7 @@ string Activity::getActivity() {
 Activity::Activity(const Activity &act){
         activityTitle = act.activityTitle;
         activityCreator = act.activityCreator;
-        //activityVenue = act.activityVenue;
+        // activityVenue = act.activityVenue;
         beginDateTime = act.beginDateTime;
         endDateTime = act.endDateTime;
         exclusiveInput = act.exclusiveInput;

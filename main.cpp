@@ -8,8 +8,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
+
 using namespace std;
  //TODO: Destructor somewhere??
+
+ // function to 
 
   
 int main() { 
@@ -106,49 +110,75 @@ int main() {
       else if(topInput == "Logout"){
          bigCheck = false;
       }
-   } // end of all while loops.
+   }  // end of all while loops.
    // CP3 code begins here
    //LinkedList<Venue>;
    // Creates a new linked list on the heap. use destructor later
-   LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
+   // LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    // use venueList
-   string str0; string str1; string str2;
    string venueLine;
    ifstream VenueFile ("VenueFile.txt");
   if (VenueFile.is_open()) {
      while(getline(VenueFile, venueLine)){
-        cout << venueLine << endl;
-        int lineSize; 
-        lineSize = venueLine.length(); 
-        char venueLine[lineSize]; 
-        int whiteSpaceCount = 0;
-        // stringstream ss
-       // ss >> venue >> capacity >> location
-        for(int i = 0; i < lineSize; ++i) {
-           if(whiteSpaceCount >= 2) {
-              break;
-           }
-           if(str0 != NULL) {
-
-           }
-           if(venueLine[i] == " ") {
-
-           }
-           cout << venueLine[i] << " ";
+        //cout << venueLine << endl;
+        string str(venueLine);
+        string tmp;
+        stringstream str_strm(str);
+        vector<string> words;
+        string venueNameTemp;
+        string venueCapacityTemp;
+        string venueLocationTemp;
+        while (str_strm >> tmp) {
+           words.push_back(tmp);
         }
-
-        //char* token = strtok(string, " ");
-        //while(token != NULL) {
-
-           
+        for (int i = 0; i < 3; ++i) {
+           venueNameTemp = words[0];
+           venueCapacityTemp = words[1];
+           venueLocationTemp = words[2];
+        }
+       //stringstream str_strm(venueNameTemp, venueCapacityTemp, venueLocationTemp);
+       // stringstream ss;
+       // string tmp; // a string to sore the word on each iteration
         
-         
-         /*str0 = venueLine.split(" ");
-         str1 = venueLine.split(" ");
-         str2 = venueLine;*/
+        //ss >> venueNameTemp >> venueCapacityTemp >> venueLocationTemp >> '\n';   
+        cout << "New Venue info: " << endl;
+        cout << "Venue Name: " << venueNameTemp << endl;
+        cout << "Capacity: " << venueCapacityTemp << endl;
+        cout << "Venue Location: " << venueLocationTemp << endl;
+        cout << endl;
+
+        // cast the capacity from string to int
+        int venueCapacityTempInt;
+        venueCapacityTempInt = stoi(venueCapacityTemp);
+        
+        //call venue constructor 
+
+        Venue venueObj(venueNameTemp, venueCapacityTempInt, venueLocationTemp);
+        //cout << 
+
+        //LinkedList<string> *words = new LinkedList<string>();
+       // vector<string> words;
+       /*
+      // LinkedList<string> *words = new LinkedList<string>(); 
+        while (str_strm >> tmp) {
+           words->append(tmp);
         }
+        */
+        
+      
+
+        } 
      }
-  
+// add to linkedinlist 
+  //  Node *node = head;
+       // while(node->next != nullptr) {
+       //    cout << node->data << endl;
+           // node = node->next;
+           // advance the node ptr to the next one
+           // make a ptr to the first one
+           // print out data at that one
+           // change that ptr to point to next one
+
 
    //venueList.append(venue);
 
