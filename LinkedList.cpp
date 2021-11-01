@@ -1,12 +1,4 @@
 //#include"LinkedList.h"
-#include"Activity.h"
-#include<iostream>
-#include<sstream>
-#include<string>
-#include <iostream>
-#include <fstream>  
-
-using namespace std;
 
 template <typename T>
 void LinkedList<T>::append(T data) {

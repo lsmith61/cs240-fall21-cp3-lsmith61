@@ -4,7 +4,8 @@
 #include <vector>
 #include <iostream>
 #include <fstream>  
-#include"Activity.h"
+#include<sstream>
+#include<string>  
 
 using namespace std;
 
@@ -31,6 +32,7 @@ class LinkedList {
         // ~LinkedList() {}; // destructor 
         LinkedList(T data){this->head = nullptr; };
         int getSize() {return size; };
+       // template <typename T> 
         void append(T data); // add at the end;
         void printLinkedListVenue();
         void printLinkedListUser();
