@@ -1,6 +1,10 @@
+// DO NOT NEED THIS WHOLE FILE -->
+// EVERYTHING IS IN .CPP
+
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
-#include <string>
+
+
 #include <vector>
 #include <iostream>
 #include <fstream>  
@@ -23,21 +27,23 @@ class Node {
 template <typename T> 
 class LinkedList {
     private:
-        
-        
+    
     public:
         Node<T> *head;
         int size;
         LinkedList() {};
         // ~LinkedList() {}; // destructor 
-        LinkedList(T data){this->head = nullptr; };
+        LinkedList(T data){
+            head = nullptr;
+            size = 0;
+        };
         int getSize() {return size; };
-       // template <typename T> 
         void append(T data); // add at the end;
         void printLinkedListVenue();
         void printLinkedListUser();
         void printLinkedListActivity();
         void printLinkedListAttendance(); 
+        
 };
 
 #include "LinkedList.cpp"
