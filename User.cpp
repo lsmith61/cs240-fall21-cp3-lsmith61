@@ -13,6 +13,22 @@ User::User() {
   
 }
 
+ostream& operator<<(ostream& os, const User& opUserObj) {
+    os << "UserID: " << opUserObj.username << 
+    " First Name: " << opUserObj.firstname <<
+    " Last name:  " << opUserObj.lastname << endl;
+
+}
+
+bool User::operator == (User& rhs) {
+    if(username == rhs.username){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 void User::setUsername(){
     cout << "Create a user name: " << endl;
     cin >> username;
@@ -38,14 +54,6 @@ void User::addActivity(Activity myActivity){
     myActivityCollection->addToArray(myActivity);
 } 
 
-
-string User::getUsername() {
-    return username;
-}
-
-string User::getPassword() {
-    return password;
-}
 
 ActivityCollection User::getActivityCollection() {
     return *myActivityCollection;

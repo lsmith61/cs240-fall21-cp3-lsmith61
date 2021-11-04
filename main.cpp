@@ -57,7 +57,49 @@ int main() {
      }
      string venueFileName;
      venueFileName = "VenueOut.txt";
-     venueList->outputLinkedList(venueFileName);
+    // venueList->outputLinkedList(venueFileName);
+
+
+     // USER TXT FILE
+   LinkedList<User> *userList = new LinkedList<User>(); 
+   // use venueList
+   string userLine;
+   ifstream userFile ("UserFile.txt");
+  if (userFile.is_open()) {
+     while(getline(userFile, userLine)){
+        //cout << venueLine << endl;
+        string str(userLine);
+        string tmpUser;
+        string strUser;
+        stringstream ss(str);
+        //vector<string> wordsUser;
+        string userID;
+        string userFirstname;
+        string userLastname;
+        ss >> userID >> userFirstname >> userLastname;
+
+        /*while (str_strmUser >> tmpUser) {
+           wordsUser.push_back(tmpUser);
+        }
+        for (int i = 0; i < 3; ++i) {
+           userID = wordsUser[0];
+           userFirstname = wordsUser[1];
+        }
+        for (int j = 2; j < wordsUser.size(); ++ j) {
+            userLastname += wordsUser[j] + " ";
+        }*/
+        
+        //call venue constructor, works successfully
+        User userObj(userID, userFirstname, userLastname);
+        cout << userObj << endl;
+        if(userList->find(userObj) == false){
+           userList->append(userObj);           
+        } 
+      } 
+   }
+     string userOutputFile;
+     userOutputFile = "UserOut.txt";
+     userList->outputLinkedList(userOutputFile);
 
    return 0;
 }
