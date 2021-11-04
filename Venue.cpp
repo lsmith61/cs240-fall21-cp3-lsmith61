@@ -14,8 +14,7 @@ ostream& operator<<(ostream& os, const Venue& opVenueObj) {
  }
 
 bool Venue::operator == (Venue& rhs) {
-    Venue venueLHS;
-    if(venueLHS.venueName == rhs.venueName) {
+    if(venueName == rhs.venueName) {
         // return True if the venueName already exists 
         return true;
     }

@@ -50,17 +50,18 @@ template <typename T>
 bool LinkedList<T>::find(T data) {
     Node<T>* current = head;
     if(current == nullptr){
-        // cout << "returning false" << endl << data << endl;
+        //cout << "returning false 1" << endl << data << endl;
         return false;
     }
         // finding the last node of the linkedlist, current is last node
     while(current != nullptr){
-        // cout << current->getData() << endl;
         if(current->getData() == data){
+            //cout << current->getData() << " and " << data << "\n" << endl;
             return true;
         }
         current = current->next;
     }
+    //cout << "returning false 2" << endl;
     return false;
 }
 
@@ -77,6 +78,7 @@ void LinkedList<T>::append(T data) {
     else{
         Node<T>* current = head;
         while(current->next != NULL){
+            //cout << current->next->getData() << endl;
             current = current->next;
         }
         current->next = newNode;
@@ -86,26 +88,6 @@ void LinkedList<T>::append(T data) {
      size ++;
 } 
 
-/*
-template <typename T>
-bool LinkedList<T>::compareTo(string venueNameComp, Node<T> *traverse) {
-    if(head == nullptr) {
-        cout << "list is empty. nothing to compare" << endl;
-    }
-    while(traverse != NULL) {
-        cout << venueNameComp << " ";
-        cout << traverse->data.getVenueName() << endl;
-        if(venueNameComp == traverse->data.getVenueName()){
-            // return true if the file is already in there
-            return false;
-        }
-        traverse = traverse->next;
-        // return false if the file is NOT already used
-    }
-    // return false if the file is NOT already used
-    return true;   
-}
-*/
 template <typename T>
 void LinkedList<T>::print(){
      Node<T>* current = head;
@@ -123,7 +105,6 @@ void LinkedList<T>::outputLinkedList(string fileName){
      while(traverse != nullptr) {
          // insertion overloaded should be operated
         outfile << traverse->data << endl; 
-        outfile << "temp data string (Line 112 LL)" << endl;
         // go to next node
         traverse = traverse->next;
      }   
