@@ -1,26 +1,36 @@
 Venue Name: Digman Capacity: 500 Location: Dickinson 
 
-<<<<<<< HEAD
 temp data string (Line 112 LL)
-=======
 Venue Name: Digman Capacity: 500 Location: Dickinson 
 
+temp data string (Line 112 LL)
 Venue Name: Endicott Capacity: 450 Location: Newing 
 
+temp data string (Line 112 LL)
 Venue Name: Windham Capacity: 400 Location: Mountainview 
 
+temp data string (Line 112 LL)
 Venue Name: Yankee_Stadium Capacity: 20000 Location: NYC 
 
+temp data string (Line 112 LL)
 Venue Name: IHOP Capacity: 45 Location: Boston, Ma 
 
-Venue Name: EB-G7 Capacity: 28 Location: Binghamton University 
-
-Venue Name: Nike_Store Capacity: 88 Location: Tenafly, NJ 
-
+temp data string (Line 112 LL)
 Venue Name: Digman Capacity: 500 Location: Dickinson 
 
+temp data string (Line 112 LL)
 Venue Name: EB-G7 Capacity: 28 Location: Binghamton University 
 
+temp data string (Line 112 LL)
+Venue Name: Nike_Store Capacity: 88 Location: Tenafly, NJ 
+
+temp data string (Line 112 LL)
+Venue Name: Digman Capacity: 500 Location: Dickinson 
+
+temp data string (Line 112 LL)
+Venue Name: EB-G7 Capacity: 28 Location: Binghamton University 
+
+temp data string (Line 112 LL)
 Venue Name: Chipotle Capacity: 45 Location: New Haven,CT 
 
->>>>>>> 255768aaa8cfd9784d32c1761a67fa5cfebc12af
+temp data string (Line 112 LL)

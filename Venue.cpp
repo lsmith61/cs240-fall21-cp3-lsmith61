@@ -5,11 +5,7 @@
 #include <iostream>
 #include <fstream> 
 
-<<<<<<< HEAD
 ostream& operator<<(ostream& os, const Venue& opVenueObj) {
-=======
- ostream& operator << (ostream& os, Venue& opVenueObj) {
->>>>>>> 255768aaa8cfd9784d32c1761a67fa5cfebc12af
     os << "Venue Name: " << opVenueObj.venueName << 
     " Capacity: " << opVenueObj.capacity <<
     " Location: " << opVenueObj.location << endl;

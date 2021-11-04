@@ -24,11 +24,7 @@ class Venue {
         string getVenueName() {return venueName; };
         int getCapacity() {return capacity; };
         string getLocation() {return location; };
-<<<<<<< HEAD
         friend ostream& operator << (ostream& os, const Venue& opVenueObj);
-=======
-        friend ostream& operator << (ostream& os, Venue& opVenueObj);
->>>>>>> 255768aaa8cfd9784d32c1761a67fa5cfebc12af
         bool operator == (Venue& rhs);
         // venue operator overloading equals 
 };

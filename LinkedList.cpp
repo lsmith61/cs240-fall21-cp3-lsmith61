@@ -76,25 +76,12 @@ void LinkedList<T>::append(T data) {
     }
     else{
         Node<T>* current = head;
-        //Node<T>* currentPlus = current->next;
-        // finding the last node of the linkedlist, current is last node
         while(current->next != NULL){
-            //cout << current->getData() << endl;
             current = current->next;
-            
-            // if(current->getData() == data){
-            //     //dont insert 
-            //     break;
-            // }
-            // current = current->next;
-          //  currentPlus = currentPlus->next; // possibly how to fix last node error
         }
         current->next = newNode;
-        // cout << current->next->getData();
-        // current becomes 2nd to last node, last node is newNode
-        // current->next = newNode; //newNode hols the data that was passed in
-        // marks the new end of the linked list
-        current->next = nullptr;
+    
+        current->next->next = nullptr;
     }
      size ++;
 } 
