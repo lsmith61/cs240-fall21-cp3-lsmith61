@@ -1,1 +1,20 @@
-UserID: 
+UserID: lsmith61 First Name: luke Last name:  smith 
+
+UserID: acohen89 First Name: adam Last name:  cohen 
+
+UserID: gbarth8 First Name: garrett Last name:  barth 
+
+UserID: xxx_sniper First Name: aaron Last name:  maymin 
+
+UserID: zhalper5 First Name: zack Last name:  halperin 
+
+UserID: hrosenheim1 First Name: hillel Last name:  rosenheim 
+
+UserID: bryan5 First Name: bailey Last name:  burkland ryan 
+
+UserID: skobryn1 First Name: simona Last name:  kobryn 
+
+UserID: hroth2 First Name: hannah Last name:  roth 
+
+UserID: sroth4 First Name: sophie Last name:  roth 
+

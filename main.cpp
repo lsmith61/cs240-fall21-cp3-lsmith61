@@ -17,9 +17,12 @@ using namespace std;
 int main() { 
    // CP3 code begins here
    // Creates a new linked list on the heap. use destructor later
-
-   // VENUE FILE    
+  
+  // Linked Lists Declarations
    LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
+   LinkedList<User> *userList = new LinkedList<User>(); 
+   // VENUE FILE    
+  
    // use venueList
    string venueLine;
    ifstream VenueFile ("VenueFile.txt");
@@ -61,24 +64,22 @@ int main() {
 
 
      // USER TXT FILE
-   LinkedList<User> *userList = new LinkedList<User>(); 
    // use venueList
    string userLine;
    ifstream userFile ("UserFile.txt");
   if (userFile.is_open()) {
      while(getline(userFile, userLine)){
         //cout << venueLine << endl;
-        string str(userLine);
+        string strUser(userLine);
         string tmpUser;
-        string strUser;
-        stringstream ss(str);
-        //vector<string> wordsUser;
+        stringstream str_strmUser(strUser);
+        vector<string> wordsUser;
         string userID;
         string userFirstname;
         string userLastname;
-        ss >> userID >> userFirstname >> userLastname;
+       // ss >> userID >> userFirstname >> userLastname;
 
-        /*while (str_strmUser >> tmpUser) {
+        while (str_strmUser >> tmpUser) {
            wordsUser.push_back(tmpUser);
         }
         for (int i = 0; i < 3; ++i) {
@@ -87,13 +88,13 @@ int main() {
         }
         for (int j = 2; j < wordsUser.size(); ++ j) {
             userLastname += wordsUser[j] + " ";
-        }*/
+        }
         
         //call venue constructor, works successfully
         User userObj(userID, userFirstname, userLastname);
-        cout << userObj << endl;
+        cout << "Passed in" << userObj << endl;
         if(userList->find(userObj) == false){
-           userList->append(userObj);           
+            userList->append(userObj);           
         } 
       } 
    }

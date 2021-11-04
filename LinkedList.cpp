@@ -48,6 +48,7 @@ class LinkedList {
 
 template <typename T>
 bool LinkedList<T>::find(T data) {
+    cout << data;
     Node<T>* current = head;
     if(current == nullptr){
         //cout << "returning false 1" << endl << data << endl;
