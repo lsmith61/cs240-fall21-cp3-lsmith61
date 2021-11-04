@@ -1,6 +1,6 @@
 #include "Activity.h"
-#include"Venue.h"
-#include"LinkedList.h"
+#include "Venue.h"
+#include "LinkedList.cpp"
 #include "ActivityCollection.h"
 #include "Login.h"
 #include "User.h"
@@ -29,6 +29,7 @@ int main() {
 
  //out << ""
    //UserCollection myUserCollection;
+   /*
    vector<User> usersVector;
    bool bigCheck = true;
    bool smallCheck = true;
@@ -46,13 +47,13 @@ int main() {
         // myUserCollection.addToArray(myUser);
 
          //usersVector.push_back(myUser);
-         /*
-         cout << "Enter username: " << endl;
-         cin >> userNameInput;
-         cout << "Enter password: " << endl;
-         cin >> passwordInput;
-         Login loginUserObj(userNameInput, passwordInput);
-         */
+         
+         //cout << "Enter username: " << endl;
+         //cin >> userNameInput;
+         //cout << "Enter password: " << endl;
+         //cin >> passwordInput;
+         //Login loginUserObj(userNameInput, passwordInput);
+         
       }
       else if(topInput == "Login"){
         cout << "Enter Username: " << endl;
@@ -110,10 +111,15 @@ int main() {
       else if(topInput == "Logout"){
          bigCheck = false;
       }
-   }  // end of all while loops.
+   }  
+   */
+   
+   // end of all while loops.
    // CP3 code begins here
    //LinkedList<Venue>;
    // Creates a new linked list on the heap. use destructor later
+
+   // VENUE FILE    
    LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    // use venueList
    string venueLine;
@@ -143,11 +149,14 @@ int main() {
        // string tmp; // a string to sore the word on each iteration
         
         //ss >> venueNameTemp >> venueCapacityTemp >> venueLocationTemp >> '\n';   
+        /*
+        // TESTING
         cout << "New Venue info: " << endl;
         cout << "Venue Name: " << venueNameTemp << endl;
         cout << "Capacity: " << venueCapacityTemp << endl;
         cout << "Venue Location: " << venueLocationTemp << endl;
         cout << endl;
+        */
 
         // cast the capacity from string to int
         int venueCapacityTempInt;
@@ -155,22 +164,20 @@ int main() {
         
         //call venue constructor, works successfully
         Venue venueObj(venueNameTemp, venueCapacityTempInt, venueLocationTemp);
+        // cout << venueObj << endl;
         venueList->append(venueObj);
-        // append to linkedList
-        //debug line
-        //cout << endl << "PRINTING CAPACITY: " << venueObj.getCapacity() << endl << endl;
-
-        //LinkedList<string> *words = new LinkedList<string>();
-       // vector<string> words;
-       /*
-      // LinkedList<string> *words = new LinkedList<string>(); 
-        while (str_strm >> tmp) {
-           words->append(tmp);
-        }
-        */
-
+      //   if(venueList->find(venueObj) == false){
+      //      venueList->append(venueObj);
+      //      // APPEND IS CREATING SEG FAULT, if commented out it works
+      //   }
+        
         } 
+             
      }
+     venueList->print();
+     string venueFileName;
+     venueFileName = "VenueOut.txt";
+     venueList->outputLinkedList(venueFileName);
 
 // overload a compareTo operator ??
 // add to linkedinlist 

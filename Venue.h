@@ -14,7 +14,7 @@ class Venue {
 
     public:
         // empty constructor 
-        Venue();
+        Venue(){};
         //value  constructor 
         Venue(string venueName, int capacity, string location){
             this->venueName = venueName; 
@@ -24,6 +24,8 @@ class Venue {
         string getVenueName() {return venueName; };
         int getCapacity() {return capacity; };
         string getLocation() {return location; };
+        friend ostream& operator << (ostream& os, const Venue& opVenueObj);
+        bool operator == (Venue& rhs);
         // venue operator overloading equals 
 };
 

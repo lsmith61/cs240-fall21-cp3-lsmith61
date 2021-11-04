@@ -1,0 +1,3 @@
+Venue Name: Digman Capacity: 500 Location: Dickinson 
+
+temp data string (Line 112 LL)
