@@ -1,4 +1,5 @@
 Digman 500 Dickinson
+Digman 500 Dickinson
 Endicott 450 Newing
 Windham 400 Mountainview
 Yankee_Stadium 20000 NYC
