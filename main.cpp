@@ -166,10 +166,10 @@ int main() {
         Venue venueObj(venueNameTemp, venueCapacityTempInt, venueLocationTemp);
         // cout << venueObj << endl;
         venueList->append(venueObj);
-      //   if(venueList->find(venueObj) == false){
-      //      venueList->append(venueObj);
-      //      // APPEND IS CREATING SEG FAULT, if commented out it works
-      //   }
+         if(venueList->find(venueObj) == false){
+           venueList->append(venueObj);
+           // APPEND IS CREATING SEG FAULT, if commented out it works
+        }
         
         } 
              

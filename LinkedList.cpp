@@ -50,12 +50,12 @@ template <typename T>
 bool LinkedList<T>::find(T data) {
     Node<T>* current = head;
     if(current == nullptr){
-        cout << "returning false" << endl << data << endl;
+        // cout << "returning false" << endl << data << endl;
         return false;
     }
         // finding the last node of the linkedlist, current is last node
     while(current != nullptr){
-        cout << current->getData() << endl;
+        // cout << current->getData() << endl;
         if(current->getData() == data){
             return true;
         }
