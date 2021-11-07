@@ -64,7 +64,6 @@ int main() {
 
 
      // USER TXT FILE
-   // use venueList
    string userLine;
    ifstream userFile ("UserFile.txt");
   if (userFile.is_open()) {

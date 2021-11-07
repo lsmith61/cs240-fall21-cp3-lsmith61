@@ -12,7 +12,7 @@ class Activity {
         string activityTitle;
         string activityCreator; 
        // string activityVenue; 
-        //Venue venue;
+        Venue venue;
         DateTime beginDateTime;
         DateTime endDateTime;
         string exclusiveInput;

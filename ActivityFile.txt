@@ -1,0 +1,7 @@
+Study_Group Luke 10:00:00 10-29-2021 11:00:00 10-29-2021 Union y
+Practice Adam 13:30:00 09-17-2021 15:30:00 09-17-2021 Turf y
+Movie_Night Simona 21:00:00 11-15-2021 23:00:00 11-15-2021 Union n
+Dinner Simona 22:00:00 11-15-2021 24:00:00 11-15-2021 C4 n 
+Office_Hours Jenn 08:00:00 11-16-2021 09:00:00 11-16-2021 G7 n 
+camping_trip Luke 12:00:00 07-23-2021 12:00:00 07-30-2021 catskills n 
+shopping simona 11:00:00 10-19-2021 12:00:00 10-19-2021 wegmans y 
