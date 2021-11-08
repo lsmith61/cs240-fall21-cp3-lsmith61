@@ -13,10 +13,13 @@ using namespace std;
  //TODO: Destructor somewhere??
 
   
-int main() { 
+int main(int argc, char** argv) { 
    // CP3 code begins here
    // Creates a new linked list on the heap. use destructor later
-  
+   string venueFileInput = argv[1];
+   string userFileInput = argv[2];
+   string activityFileInput = argv[3];
+  // string attendanceFile = argv[4];
   // Linked Lists Declarations
    LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    LinkedList<User> *userList = new LinkedList<User>(); 
@@ -25,10 +28,11 @@ int main() {
   
    // use venueList
    string venueLine;
-   ifstream VenueFile ("VenueFile.txt");
+   ifstream VenueFile (venueFileInput);
   if (VenueFile.is_open()) {
      while(getline(VenueFile, venueLine)){
         //cout << venueLine << endl;
+        int line = 1;
         string str(venueLine);
         string tmp;
         stringstream str_strm(str);
@@ -53,11 +57,13 @@ int main() {
         
         //call venue constructor, works successfully
         Venue venueObj(venueNameTemp, venueCapacityTempInt, venueLocationTemp);
+         
          if(venueList->find(venueObj) == false){
            venueList->append(venueObj);           
         } 
-        } 
-     }
+        line = line + 1;
+      }  
+   }
      string venueFileName;
      venueFileName = "VenueOut.txt";
     // venueList->outputLinkedList(venueFileName);
@@ -65,7 +71,7 @@ int main() {
 
 // USER TXT FILE
    string userLine;
-   ifstream userFile ("UserFile.txt");
+   ifstream userFile (userFileInput);
   if (userFile.is_open()) {
      while(getline(userFile, userLine)){
         //cout << venueLine << endl;
@@ -104,7 +110,7 @@ int main() {
 
 // Activity TXT File
  string activityLine;
-   ifstream activityFile ("ActivityFile.txt");
+   ifstream activityFile (activityFileInput);
   if (activityFile.is_open()) {
      while(getline(activityFile, activityLine)){
         //cout << venueLine << endl;

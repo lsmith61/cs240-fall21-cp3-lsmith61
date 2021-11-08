@@ -36,8 +36,7 @@ class Activity {
 
         friend ostream& operator<<(ostream& os, const Activity& opActivityObj);
         bool operator == (Activity& rhs);
-
-
+        bool simpleCapacityConflict();
 
         
        

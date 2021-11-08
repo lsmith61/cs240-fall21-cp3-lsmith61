@@ -135,6 +135,7 @@ string DateTime::createDateTime() {
     // 
     return " [" + date + " " + time + "] "; 
 }
+   
     /*
     // implement - turn this into an epoch 
     secondsEpoch = timeS;
@@ -185,6 +186,7 @@ int DateTime::getTimeInSeconds() {
 
 
 
+
 bool DateTime::operator<(const DateTime &end){
     //return timeTotal < end.timeTotal;
     // this is the same as line 141
@@ -199,7 +201,6 @@ bool DateTime::operator<(const DateTime &end){
         return false;
     }
 }
-
 */
 
 string DateTime::print() {

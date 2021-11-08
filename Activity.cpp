@@ -25,3 +25,11 @@ bool Activity::operator == (Activity& rhs) {
         return false;
     }
 }
+/*
+bool Activity::simpleCapacityConflict() {
+    if(userCount > venueObj.getCapacity()){
+        
+    }
+   
+}
+*/
