@@ -21,6 +21,7 @@ int main() {
   // Linked Lists Declarations
    LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    LinkedList<User> *userList = new LinkedList<User>(); 
+   LinkedList<Activity> *activityList = new LinkedList<Activity>();
    // VENUE FILE    
   
    // use venueList
@@ -100,6 +101,53 @@ int main() {
      string userOutputFile;
      userOutputFile = "UserOut.txt";
      userList->outputLinkedList(userOutputFile);
+
+// Activity TXT File
+ string activityLine;
+   ifstream activityFile ("ActivityFile.txt");
+  if (activityFile.is_open()) {
+     while(getline(activityFile, activityLine)){
+        //cout << venueLine << endl;
+        string strActivity(activityLine);
+        string tmpActivity;
+        stringstream str_strmActivity(strActivity);
+        vector<string> wordsActivity;
+        string activityTitleTemp;
+        string activityCreatorTemp;
+        DateTime beginDateTimeTemp;
+        DateTime endDateTimeTemp;
+        Venue venueTemp;
+        string exclusiveTemp;
+        string garbage;
+
+        while (str_strmActivity >> tmpActivity) {
+           wordsActivity.push_back(tmpActivity);
+        }
+        for (int i = 0; i < 9; ++i) {
+           activityTitleTemp = wordsActivity[0];
+           activityCreatorTemp = wordsActivity[1];
+           beginTimeTemp = wordsActivity[2];
+           beingDateTemp = wordsActivity[3];
+           endTimeTemp = wordsActivity[4];
+           endDateTemp = wordsActivity[5];
+           venueTemp = wordsActivity[6];
+           exclusiveTemp = wordsActivity[7];
+           garbage = wordsActivity[8];
+        }
+       
+        beginDateTimeObj DateTime(beginTimeTemp, beginDateTemp);
+        endDateTimeObj DateTime(endTimeTemp, endDateTemp);
+        //call venue constructor, works successfully
+        Activity activityObj(activityTitleTemp, activityCreatorTemp, beginDateTimeObj, endDateTimeObj, venueTemp, exclusiveTemp);
+        cout << "Passed in" << activityObj << endl;
+        if(activityList->find(activityObj) == false){
+            activityList->append(activityObj);           
+        } 
+      } 
+   }
+     string activityOutputFile;
+     activityOutputFile = "ActivityOut.txt";
+     activityList->outputLinkedList(activityOutputFile);
 
    return 0;
 }

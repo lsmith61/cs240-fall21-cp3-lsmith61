@@ -13,8 +13,12 @@ class Activity {
         string activityCreator; 
        // string activityVenue; 
         Venue venue;
-        DateTime beginDateTime;
-        DateTime endDateTime;
+       // DateTime beginDateTime;
+        string beginTimeTemp;
+        string beginDateTemp;
+        //DateTime endDateTime;
+        string endTimeTemp;
+        string endDateTemp;
         string exclusiveInput;
         string exclusiveOutput;
         bool exclusive;
@@ -23,7 +27,18 @@ class Activity {
     
     public:
         // one line funcitons can stay in here
-        Activity() {};
+        Activity();
+       // Activity(string activityTitle, string activityCreator, DateTime beginDateTime, DateTime endDateTime, Venue venue, bool exclusive);
+        Activity(string activityTitle, string activityCreator, string beginTimeTemp, string beginDateTemp, string endTimeTemp, string endDateTemp, Venue venue, bool exclusive) {
+        this->activityTitle = activityTitle;
+        this->activityCreator = activityCreator;
+        this->beginTimeTemp = beginTimeTemp;
+        this->beginDateTemp = beginDateTime;
+        this->endTimeTemp = endTimeTemp;
+        this->endDateTemp = endDateTemp;
+        this->venue = venue;
+        this->exclusive = exclusive;
+        }
         void createActivity();
         Activity(string, string, string);
         Activity(const Activity &act);
