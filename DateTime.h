@@ -40,13 +40,12 @@ class DateTime {
     int yearsInSeconds;
     int totalSeconds;
 
-
-
   public:
+    DateTime(){};
     DateTime(string date, string time) {
       this->date = date;
       this->time = time;
-    };
+    }
     DateTime(int, int, int, int, int, int);
     string createDateTime();
     string print();
@@ -55,7 +54,8 @@ class DateTime {
    // DateTime operator-(DateTime rhs);
     DateTime elapsedDate();
     DateTime epoch(DateTime *totalEpochTime);
-   // bool operator<(const DateTime &other);
+    DateTime& operator = (const DateTime& rhs); 
+    // bool operator<(const DateTime &other);
 
 };
 

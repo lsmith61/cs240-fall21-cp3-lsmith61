@@ -7,3 +7,6 @@
 
 using namespace std;
 
+ostream& operator<<(ostream& os, const Activity& opActivityObj) {
+    os << ""
+}

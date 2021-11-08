@@ -12,7 +12,8 @@ class Activity {
         string activityTitle;
         string activityCreator; 
        // string activityVenue; 
-        Venue venue;
+        //Venue venue;
+        string venue;
         DateTime beginDateTime;
         DateTime endDateTime;
         string exclusiveInput;
@@ -23,8 +24,8 @@ class Activity {
     
     public:
         // one line funcitons can stay in here
-        Activity();
-      /*  Activity(string activityTitle, string activityCreator, string beginTime, string beginDate, string endTime, string endDate, Venue venue, bool exclusive) {
+        Activity() {}
+        Activity(string activityTitle, string activityCreator, DateTime beginDateTime, DateTime endDateTime, string venue, bool exclusive) {
         this->activityTitle = activityTitle;
         this->activityCreator = activityCreator;
         this->beginDateTime = beginDateTime;
@@ -32,7 +33,13 @@ class Activity {
         this->venue = venue;
         this->exclusive = exclusive;
         }
-        */
+
+        friend ostream& operator<<(ostream& os, const Activity& opActivityObj);
+        
+
+
+
+        
        
 };
 

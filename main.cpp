@@ -20,7 +20,7 @@ int main() {
   // Linked Lists Declarations
    LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    LinkedList<User> *userList = new LinkedList<User>(); 
-  // LinkedList<Activity> *activityList = new LinkedList<Activity>();
+   LinkedList<Activity> *activityList = new LinkedList<Activity>();
    // VENUE FILE    
   
    // use venueList
@@ -101,7 +101,7 @@ int main() {
      userOutputFile = "UserOut.txt";
      userList->outputLinkedList(userOutputFile);
 
-/*
+
 // Activity TXT File
  string activityLine;
    ifstream activityFile ("ActivityFile.txt");
@@ -114,9 +114,14 @@ int main() {
         vector<string> wordsActivity;
         string activityTitleTemp;
         string activityCreatorTemp;
+        string beginTimeTemp;
+        string beginDateTemp;
+        string endTimeTemp;
+        string endDateTemp;
         DateTime beginDateTimeTemp;
         DateTime endDateTimeTemp;
-        Venue venueTemp;
+        string venueTemp;
+        //Venue venueTemp;
         string exclusiveTemp;
         string garbage;
 
@@ -127,20 +132,26 @@ int main() {
            activityTitleTemp = wordsActivity[0];
            activityCreatorTemp = wordsActivity[1];
            beginTimeTemp = wordsActivity[2];
-           beingDateTemp = wordsActivity[3];
+           beginDateTemp = wordsActivity[3];
            endTimeTemp = wordsActivity[4];
            endDateTemp = wordsActivity[5];
            venueTemp = wordsActivity[6];
            exclusiveTemp = wordsActivity[7];
            garbage = wordsActivity[8];
         }
-       
-        beginDateTimeObj DateTime(beginTimeTemp, beginDateTemp);
-        endDateTimeObj DateTime(endTimeTemp, endDateTemp);
+        bool exclusiveBool;
+        if(exclusiveTemp == "y") {
+           exclusiveBool = true;
+        }
+        else{
+           exclusiveBool = false;
+        }
+        DateTime beginDateTimeObj(beginTimeTemp, beginDateTemp);
+        DateTime endDateTimeObj(endTimeTemp, endDateTemp);
 
         //call venue constructor, works successfully
-        Activity activityObj(activityTitleTemp, activityCreatorTemp, beginDateTimeObj, endDateTimeObj, venueTemp, exclusiveTemp);
-        cout << "Passed in" << activityObj << endl;
+        Activity activityObj(activityTitleTemp, activityCreatorTemp, beginDateTimeObj, endDateTimeObj, venueTemp, exclusiveBool);
+       // cout << "Passed in" << activityObj << endl;
         if(activityList->find(activityObj) == false){
             activityList->append(activityObj);           
         } 
@@ -149,7 +160,7 @@ int main() {
      string activityOutputFile;
      activityOutputFile = "ActivityOut.txt";
      activityList->outputLinkedList(activityOutputFile);
-*/
+
    return 0;
 }
   

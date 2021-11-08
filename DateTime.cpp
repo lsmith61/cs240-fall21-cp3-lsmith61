@@ -23,6 +23,15 @@ DateTime::DateTime(int dateM, int dateD, int dateY, int timeH, int timeM,int tim
 }
 */
 
+
+DateTime& DateTime::operator = (const DateTime& rhs) {
+    date = rhs.date;
+    time = rhs.time;
+    return *this;
+
+}
+
+
 string DateTime::createDateTime() {
 
     std::istringstream ss;
