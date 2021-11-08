@@ -24,7 +24,7 @@ class Activity {
     public:
         // one line funcitons can stay in here
         Activity();
-        Activity(string activityTitle, string activityCreator, DateTime beginDateTime, DateTime endDateTime, Venue venue, bool exclusive) {
+      /*  Activity(string activityTitle, string activityCreator, string beginTime, string beginDate, string endTime, string endDate, Venue venue, bool exclusive) {
         this->activityTitle = activityTitle;
         this->activityCreator = activityCreator;
         this->beginDateTime = beginDateTime;
@@ -32,6 +32,7 @@ class Activity {
         this->venue = venue;
         this->exclusive = exclusive;
         }
+        */
        
 };
 

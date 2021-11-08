@@ -13,7 +13,7 @@ class User {
         string firstname;
         string lastname;
         string password;
-        ActivityCollection *myActivityCollection;
+        
 
     public:
         User();
@@ -29,10 +29,6 @@ class User {
         string getFirstname() {return firstname; };
         string getlastname() {return lastname; };
         string getPassword();
-        void addActivity(Activity);
-        void display();
-        //class ActivityCollection setActivityCollection();
-        class ActivityCollection getActivityCollection();
         friend ostream& operator<<(ostream& os, const User& opUserObj);
         bool operator == (User& rhs);
 };

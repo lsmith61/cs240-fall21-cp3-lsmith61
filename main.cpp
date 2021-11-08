@@ -1,10 +1,9 @@
 #include "Activity.h"
 #include "Venue.h"
 #include "LinkedList.cpp"
-#include "ActivityCollection.h"
+//#include "ActivityCollection.h"
 #include "Login.h"
 #include "User.h"
-#include "Test.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -21,7 +20,7 @@ int main() {
   // Linked Lists Declarations
    LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    LinkedList<User> *userList = new LinkedList<User>(); 
-   LinkedList<Activity> *activityList = new LinkedList<Activity>();
+  // LinkedList<Activity> *activityList = new LinkedList<Activity>();
    // VENUE FILE    
   
    // use venueList
@@ -102,6 +101,7 @@ int main() {
      userOutputFile = "UserOut.txt";
      userList->outputLinkedList(userOutputFile);
 
+/*
 // Activity TXT File
  string activityLine;
    ifstream activityFile ("ActivityFile.txt");
@@ -149,7 +149,7 @@ int main() {
      string activityOutputFile;
      activityOutputFile = "ActivityOut.txt";
      activityList->outputLinkedList(activityOutputFile);
-
+*/
    return 0;
 }
   

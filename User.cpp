@@ -7,7 +7,6 @@
 using namespace std;
 User::User() {
     //ActivityCollection myActivityCollection;
-    myActivityCollection = new ActivityCollection();
     username = "";
     password = "";
   
@@ -39,9 +38,7 @@ void User::setPassword() {
     cout << "Create a password: " << endl;
     cin >> password;
 }
-void User::display(){
-    myActivityCollection->displayAll();
-}
+
  /* 
  // unneccesary because when the User object is insantied that field is created, do not need to set the specifc field 
 ActivityCollection User::setActivityCollection() {
@@ -50,11 +47,4 @@ ActivityCollection User::setActivityCollection() {
 */
 
 //this is what i did with adam
-void User::addActivity(Activity myActivity){
-    myActivityCollection->addToArray(myActivity);
-} 
 
-
-ActivityCollection User::getActivityCollection() {
-    return *myActivityCollection;
-}

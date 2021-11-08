@@ -12,6 +12,7 @@ DateTime::DateTime() {
     yearInSecondsMulti = 31536000;
 }
 */
+/*
 DateTime::DateTime(int dateM, int dateD, int dateY, int timeH, int timeM,int timeS) {
     this->dateM = dateM;
     this->dateD = dateD;
@@ -20,6 +21,7 @@ DateTime::DateTime(int dateM, int dateD, int dateY, int timeH, int timeM,int tim
     this->timeM = timeM;
     this->timeS = timeS;
 }
+*/
 
 string DateTime::createDateTime() {
 
