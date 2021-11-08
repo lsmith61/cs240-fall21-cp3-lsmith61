@@ -1,0 +1,32 @@
+Activity Title: Study_Group Activity Creator: Luke Begin Time and Date: Time: 10-29-2021 Date: 10:00:00
+ End Time and Date: Time: 10-29-2021 Date: 11:00:00
+ Venue: Union Exclusive: 1
+
+Activity Title: Practice Activity Creator: Adam Begin Time and Date: Time: 09-17-2021 Date: 13:30:00
+ End Time and Date: Time: 09-17-2021 Date: 15:30:00
+ Venue: Turf Exclusive: 1
+
+Activity Title: Movie_Night Activity Creator: Simona Begin Time and Date: Time: 11-15-2021 Date: 21:00:00
+ End Time and Date: Time: 11-15-2021 Date: 23:00:00
+ Venue: Union Exclusive: 0
+
+Activity Title: Dinner Activity Creator: Simona Begin Time and Date: Time: 11-15-2021 Date: 22:00:00
+ End Time and Date: Time: 11-15-2021 Date: 24:00:00
+ Venue: C4 Exclusive: 0
+
+Activity Title: Office_Hours Activity Creator: Jenn Begin Time and Date: Time: 11-16-2021 Date: 08:00:00
+ End Time and Date: Time: 11-16-2021 Date: 09:00:00
+ Venue: G7 Exclusive: 0
+
+Activity Title: camping_trip Activity Creator: Luke Begin Time and Date: Time: 07-23-2021 Date: 12:00:00
+ End Time and Date: Time: 07-30-2021 Date: 12:00:00
+ Venue: catskills Exclusive: 0
+
+Activity Title: shopping Activity Creator: simona Begin Time and Date: Time: 10-19-2021 Date: 11:00:00
+ End Time and Date: Time: 10-19-2021 Date: 12:00:00
+ Venue: wegmans Exclusive: 1
+
+Activity Title: breakfast Activity Creator: jerod Begin Time and Date: Time: 10-20-2021 Date: 06:00:00
+ End Time and Date: Time: 10-20-2021 Date: 11:00:00
+ Venue: printing_house Exclusive: 0
+

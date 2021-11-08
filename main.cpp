@@ -63,7 +63,7 @@ int main() {
     // venueList->outputLinkedList(venueFileName);
 
 
-     // USER TXT FILE
+// USER TXT FILE
    string userLine;
    ifstream userFile ("UserFile.txt");
   if (userFile.is_open()) {
@@ -91,7 +91,7 @@ int main() {
         
         //call venue constructor, works successfully
         User userObj(userID, userFirstname, userLastname);
-        cout << "Passed in" << userObj << endl;
+        //cout << "Passed in" << userObj << endl;
         if(userList->find(userObj) == false){
             userList->append(userObj);           
         } 
@@ -124,7 +124,6 @@ int main() {
         //Venue venueTemp;
         string exclusiveTemp;
         string garbage;
-
         while (str_strmActivity >> tmpActivity) {
            wordsActivity.push_back(tmpActivity);
         }
@@ -137,7 +136,7 @@ int main() {
            endDateTemp = wordsActivity[5];
            venueTemp = wordsActivity[6];
            exclusiveTemp = wordsActivity[7];
-           garbage = wordsActivity[8];
+           //garbage = wordsActivity[8];
         }
         bool exclusiveBool;
         if(exclusiveTemp == "y") {
@@ -148,18 +147,22 @@ int main() {
         }
         DateTime beginDateTimeObj(beginTimeTemp, beginDateTemp);
         DateTime endDateTimeObj(endTimeTemp, endDateTemp);
-
+cout << "test" << endl;
         //call venue constructor, works successfully
         Activity activityObj(activityTitleTemp, activityCreatorTemp, beginDateTimeObj, endDateTimeObj, venueTemp, exclusiveBool);
-       // cout << "Passed in" << activityObj << endl;
+         cout << "Passed in" << activityObj << endl;
         if(activityList->find(activityObj) == false){
             activityList->append(activityObj);           
         } 
       } 
    }
+
      string activityOutputFile;
      activityOutputFile = "ActivityOut.txt";
      activityList->outputLinkedList(activityOutputFile);
+
+// Attendance file 
+ 
 
    return 0;
 }

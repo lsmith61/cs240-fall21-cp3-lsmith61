@@ -22,6 +22,10 @@ DateTime::DateTime(int dateM, int dateD, int dateY, int timeH, int timeM,int tim
     this->timeS = timeS;
 }
 */
+ostream& operator<<(ostream& os, const DateTime& opDateTimeObj) {
+    os << "Time: " << opDateTimeObj.time << 
+    " Date: " << opDateTimeObj.date << endl;
+}
 
 
 DateTime& DateTime::operator = (const DateTime& rhs) {

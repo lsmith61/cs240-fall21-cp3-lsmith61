@@ -55,6 +55,8 @@ class DateTime {
     DateTime elapsedDate();
     DateTime epoch(DateTime *totalEpochTime);
     DateTime& operator = (const DateTime& rhs); 
+    friend ostream& operator<<(ostream& os, const DateTime& opDateTimeObj);
+
     // bool operator<(const DateTime &other);
 
 };
