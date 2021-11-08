@@ -43,8 +43,10 @@ class DateTime {
 
 
   public:
-    DateTime() {};
-    DateTime(string, string);
+    DateTime(string date, string time) {
+      this->date = date;
+      this->time = time;
+    };
     DateTime(int, int, int, int, int, int);
     string createDateTime();
     string print();

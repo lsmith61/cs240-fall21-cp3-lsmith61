@@ -137,6 +137,7 @@ int main() {
        
         beginDateTimeObj DateTime(beginTimeTemp, beginDateTemp);
         endDateTimeObj DateTime(endTimeTemp, endDateTemp);
+
         //call venue constructor, works successfully
         Activity activityObj(activityTitleTemp, activityCreatorTemp, beginDateTimeObj, endDateTimeObj, venueTemp, exclusiveTemp);
         cout << "Passed in" << activityObj << endl;
