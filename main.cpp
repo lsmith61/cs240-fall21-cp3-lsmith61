@@ -24,8 +24,8 @@ int main(int argc, char** argv) {
    LinkedList<Venue> *venueList = new LinkedList<Venue>(); 
    LinkedList<User> *userList = new LinkedList<User>(); 
    LinkedList<Activity> *activityList = new LinkedList<Activity>();
+   
    // VENUE FILE    
-  
    // use venueList
    string venueLine;
    ifstream VenueFile (venueFileInput);
