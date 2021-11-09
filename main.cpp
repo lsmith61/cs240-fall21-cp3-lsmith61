@@ -30,9 +30,10 @@ int main(int argc, char** argv) {
    string venueLine;
    ifstream VenueFile (venueFileInput);
   if (VenueFile.is_open()) {
+      int line;
+      line = 1;
      while(getline(VenueFile, venueLine)){
         //cout << venueLine << endl;
-        int line = 1;
         string str(venueLine);
         string tmp;
         stringstream str_strm(str);
@@ -61,6 +62,9 @@ int main(int argc, char** argv) {
          if(venueList->find(venueObj) == false){
            venueList->append(venueObj);           
         } 
+        else {
+           cout << venueFileInput << " Line: " << line << " exists - ignoring" << endl;
+        }
         line = line + 1;
       }  
    }
@@ -73,6 +77,8 @@ int main(int argc, char** argv) {
    string userLine;
    ifstream userFile (userFileInput);
   if (userFile.is_open()) {
+     int line;
+      line = 1;
      while(getline(userFile, userLine)){
         //cout << venueLine << endl;
         string strUser(userLine);
@@ -101,6 +107,10 @@ int main(int argc, char** argv) {
         if(userList->find(userObj) == false){
             userList->append(userObj);           
         } 
+        else{
+            cout << userFileInput << " Line: " << line << " exists - ignoring" << endl;
+        }
+        line = line + 1;
       } 
    }
      string userOutputFile;
@@ -112,6 +122,8 @@ int main(int argc, char** argv) {
  string activityLine;
    ifstream activityFile (activityFileInput);
   if (activityFile.is_open()) {
+     int line;
+   line = 1;
      while(getline(activityFile, activityLine)){
         //cout << venueLine << endl;
         string strActivity(activityLine);
@@ -153,13 +165,16 @@ int main(int argc, char** argv) {
         }
         DateTime beginDateTimeObj(beginTimeTemp, beginDateTemp);
         DateTime endDateTimeObj(endTimeTemp, endDateTemp);
-cout << "test" << endl;
         //call venue constructor, works successfully
         Activity activityObj(activityTitleTemp, activityCreatorTemp, beginDateTimeObj, endDateTimeObj, venueTemp, exclusiveBool);
-         cout << "Passed in" << activityObj << endl;
+         //cout << "Passed in" << activityObj << endl;
         if(activityList->find(activityObj) == false){
             activityList->append(activityObj);           
         } 
+        else{
+            cout << activityFileInput << " Line: " << line << " exists - ignoring" << endl;
+        }
+       line = line + 1;
       } 
    }
 
